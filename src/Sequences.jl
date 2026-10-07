@@ -61,7 +61,7 @@ function Base.getindex(S::Sequence, ii::Int)
         return S.items[ii]
     else
         k = length(S.items) - S.preperiod
-        return S.items[mod1(ii-S.preperiod,k)]
+        return S.items[S.preperiod + mod1(ii-S.preperiod,k)]
     end
 end
 
