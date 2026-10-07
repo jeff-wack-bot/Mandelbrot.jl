@@ -1,0 +1,162 @@
+periodic p=4 k=1 cands=8 true=[6, 0, 0] false=[0, 14, 28]
+periodic p=4 k=2 cands=8 true=[6, 0, 0] false=[0, 13, 29]
+periodic p=4 k=3 cands=8 true=[6, 0, 0] false=[0, 13, 29]
+periodic p=4 k=5 cands=8 true=[6, 0, 0] false=[0, 12, 30]
+periodic p=4 k=10 cands=8 true=[6, 0, 0] false=[0, 11, 31]
+periodic p=4 k=20 cands=8 true=[6, 0, 0] false=[0, 11, 31]
+periodic p=5 k=1 cands=16 true=[15, 0, 0] false=[0, 33, 192]
+periodic p=5 k=2 cands=16 true=[13, 0, 2] false=[0, 33, 192]
+periodic p=5 k=3 cands=16 true=[15, 0, 0] false=[0, 38, 187]
+periodic p=5 k=5 cands=16 true=[15, 0, 0] false=[0, 38, 187]
+periodic p=5 k=10 cands=16 true=[15, 0, 0] false=[0, 38, 187]
+periodic p=5 k=20 cands=16 true=[15, 0, 0] false=[0, 37, 188]
+periodic p=6 k=1 cands=32 true=[24, 0, 3] false=[0, 51, 786]
+periodic p=6 k=2 cands=32 true=[26, 0, 1] false=[0, 53, 784]
+periodic p=6 k=3 cands=32 true=[24, 0, 3] false=[0, 45, 792]
+periodic p=6 k=5 cands=32 true=[26, 0, 1] false=[0, 44, 793]
+periodic p=6 k=10 cands=32 true=[27, 0, 0] false=[0, 49, 788]
+periodic p=6 k=20 cands=32 true=[27, 0, 0] false=[0, 48, 789]
+periodic p=7 k=1 cands=64 true=[48, 0, 15] false=[0, 122, 3847]
+periodic p=7 k=2 cands=64 true=[53, 0, 10] false=[0, 119, 3850]
+periodic p=7 k=3 cands=64 true=[52, 0, 11] false=[0, 123, 3846]
+periodic p=7 k=5 cands=64 true=[57, 0, 6] false=[0, 122, 3847]
+periodic p=7 k=10 cands=64 true=[62, 0, 1] false=[0, 123, 3846]
+periodic p=7 k=20 cands=64 true=[63, 0, 0] false=[0, 123, 3846]
+periodic p=8 k=1 cands=128 true=[78, 0, 42] false=[0, 211, 15029]
+periodic p=8 k=2 cands=128 true=[92, 0, 28] false=[0, 191, 15049]
+periodic p=8 k=3 cands=128 true=[96, 0, 24] false=[0, 192, 15048]
+periodic p=8 k=5 cands=128 true=[100, 0, 20] false=[0, 202, 15038]
+periodic p=8 k=10 cands=128 true=[114, 0, 6] false=[0, 203, 15037]
+periodic p=8 k=20 cands=128 true=[120, 0, 0] false=[0, 205, 15035]
+periodic p=9 k=1 cands=256 true=[135, 0, 117] false=[0, 400, 63860]
+periodic p=9 k=2 cands=256 true=[176, 0, 76] false=[0, 405, 63855]
+periodic p=9 k=3 cands=256 true=[171, 0, 81] false=[0, 398, 63862]
+periodic p=9 k=5 cands=256 true=[194, 0, 58] false=[0, 422, 63838]
+periodic p=9 k=10 cands=256 true=[241, 0, 11] false=[0, 426, 63834]
+periodic p=9 k=20 cands=256 true=[252, 0, 0] false=[0, 443, 63817]
+preperiodic (1, 1) k=1 angles=1 cands=2 true=[1, 0, 0] false=[0, 1, 0]
+preperiodic (1, 1) k=2 angles=1 cands=2 true=[1, 0, 0] false=[0, 1, 0]
+preperiodic (1, 1) k=3 angles=1 cands=2 true=[1, 0, 0] false=[0, 1, 0]
+preperiodic (1, 1) k=5 angles=1 cands=2 true=[1, 0, 0] false=[0, 1, 0]
+preperiodic (1, 1) k=10 angles=1 cands=2 true=[1, 0, 0] false=[0, 1, 0]
+preperiodic (1, 1) k=20 angles=1 cands=2 true=[1, 0, 0] false=[0, 1, 0]
+preperiodic (1, 2) k=1 angles=1 cands=5 true=[1, 0, 0] false=[0, 1, 3]
+preperiodic (1, 2) k=2 angles=1 cands=5 true=[1, 0, 0] false=[0, 2, 2]
+preperiodic (1, 2) k=3 angles=1 cands=5 true=[1, 0, 0] false=[0, 2, 2]
+preperiodic (1, 2) k=5 angles=1 cands=5 true=[1, 0, 0] false=[0, 2, 2]
+preperiodic (1, 2) k=10 angles=1 cands=5 true=[1, 0, 0] false=[0, 2, 2]
+preperiodic (1, 2) k=20 angles=1 cands=5 true=[1, 0, 0] false=[0, 1, 3]
+preperiodic (1, 3) k=1 angles=3 cands=11 true=[3, 0, 0] false=[0, 7, 23]
+preperiodic (1, 3) k=2 angles=3 cands=11 true=[3, 0, 0] false=[0, 8, 22]
+preperiodic (1, 3) k=3 angles=3 cands=11 true=[3, 0, 0] false=[0, 9, 21]
+preperiodic (1, 3) k=5 angles=3 cands=11 true=[3, 0, 0] false=[0, 8, 22]
+preperiodic (1, 3) k=10 angles=3 cands=11 true=[3, 0, 0] false=[0, 8, 22]
+preperiodic (1, 3) k=20 angles=3 cands=11 true=[3, 0, 0] false=[0, 8, 22]
+preperiodic (1, 4) k=1 angles=6 cands=23 true=[5, 0, 1] false=[0, 16, 116]
+preperiodic (1, 4) k=2 angles=6 cands=23 true=[6, 0, 0] false=[0, 18, 114]
+preperiodic (1, 4) k=3 angles=6 cands=23 true=[6, 0, 0] false=[0, 18, 114]
+preperiodic (1, 4) k=5 angles=6 cands=23 true=[6, 0, 0] false=[0, 18, 114]
+preperiodic (1, 4) k=10 angles=6 cands=23 true=[6, 0, 0] false=[0, 18, 114]
+preperiodic (1, 4) k=20 angles=6 cands=23 true=[6, 0, 0] false=[0, 17, 115]
+preperiodic (1, 5) k=1 angles=15 cands=47 true=[10, 0, 5] false=[0, 41, 649]
+preperiodic (1, 5) k=2 angles=15 cands=47 true=[12, 0, 3] false=[0, 42, 648]
+preperiodic (1, 5) k=3 angles=15 cands=47 true=[15, 0, 0] false=[0, 40, 650]
+preperiodic (1, 5) k=5 angles=15 cands=47 true=[15, 0, 0] false=[0, 45, 645]
+preperiodic (1, 5) k=10 angles=15 cands=47 true=[15, 0, 0] false=[0, 45, 645]
+preperiodic (1, 5) k=20 angles=15 cands=47 true=[15, 0, 0] false=[0, 42, 648]
+preperiodic (1, 6) k=1 angles=9 cands=59 true=[8, 0, 1] false=[0, 15, 507]
+preperiodic (1, 6) k=2 angles=9 cands=59 true=[8, 0, 1] false=[0, 13, 509]
+preperiodic (1, 6) k=3 angles=9 cands=59 true=[9, 0, 0] false=[0, 17, 505]
+preperiodic (1, 6) k=5 angles=9 cands=59 true=[9, 0, 0] false=[0, 12, 510]
+preperiodic (1, 6) k=10 angles=9 cands=59 true=[9, 0, 0] false=[0, 16, 506]
+preperiodic (1, 6) k=20 angles=9 cands=59 true=[9, 0, 0] false=[0, 16, 506]
+preperiodic (1, 8) k=1 angles=8 cands=159 true=[2, 0, 6] false=[0, 8, 1256]
+preperiodic (1, 8) k=2 angles=8 cands=159 true=[5, 0, 3] false=[0, 8, 1256]
+preperiodic (1, 8) k=3 angles=8 cands=159 true=[7, 0, 1] false=[0, 8, 1256]
+preperiodic (1, 8) k=5 angles=8 cands=159 true=[7, 0, 1] false=[0, 8, 1256]
+preperiodic (1, 8) k=10 angles=8 cands=159 true=[8, 0, 0] false=[0, 8, 1256]
+preperiodic (1, 8) k=20 angles=8 cands=159 true=[8, 0, 0] false=[0, 8, 1256]
+preperiodic (1, 10) k=1 angles=5 cands=555 true=[3, 0, 2] false=[0, 5, 2765]
+preperiodic (1, 10) k=2 angles=5 cands=555 true=[3, 0, 2] false=[0, 5, 2765]
+preperiodic (1, 10) k=3 angles=5 cands=555 true=[4, 0, 1] false=[0, 5, 2765]
+preperiodic (1, 10) k=5 angles=5 cands=555 true=[5, 0, 0] false=[0, 6, 2764]
+preperiodic (1, 10) k=10 angles=5 cands=555 true=[5, 0, 0] false=[0, 6, 2764]
+preperiodic (1, 10) k=20 angles=5 cands=555 true=[5, 0, 0] false=[0, 5, 2765]
+preperiodic (1, 11) k=1 angles=11 cands=1047 true=[3, 0, 8] false=[0, 12, 11494]
+preperiodic (1, 11) k=2 angles=11 cands=1047 true=[6, 0, 5] false=[0, 12, 11494]
+preperiodic (1, 11) k=3 angles=11 cands=1047 true=[8, 0, 3] false=[0, 12, 11494]
+preperiodic (1, 11) k=5 angles=11 cands=1047 true=[10, 0, 1] false=[0, 13, 11493]
+preperiodic (1, 11) k=10 angles=11 cands=1047 true=[11, 0, 0] false=[0, 13, 11493]
+preperiodic (1, 11) k=20 angles=11 cands=1047 true=[11, 0, 0] false=[0, 13, 11493]
+preperiodic (1, 12) k=1 angles=6 cands=2099 true=[0, 0, 6] false=[0, 6, 12582]
+preperiodic (1, 12) k=2 angles=6 cands=2099 true=[4, 0, 2] false=[0, 6, 12582]
+preperiodic (1, 12) k=3 angles=6 cands=2099 true=[4, 0, 2] false=[0, 7, 12581]
+preperiodic (1, 12) k=5 angles=6 cands=2099 true=[6, 0, 0] false=[0, 7, 12581]
+preperiodic (1, 12) k=10 angles=6 cands=2099 true=[6, 0, 0] false=[0, 7, 12581]
+preperiodic (1, 12) k=20 angles=6 cands=2099 true=[6, 0, 0] false=[0, 7, 12581]
+
+[1086187] signal 15: Terminated
+in expression starting at /home/bot/repos/Mandelbrot.jl/spiderlab/experiments/certify_soundness2.jl:71
+unknown function (ip: 0x7fff22512e68) at /usr/lib/aarch64-linux-gnu/libc.so.6
+unknown function (ip: 0x7fff22505eff) at /usr/lib/aarch64-linux-gnu/libc.so.6
+unknown function (ip: 0x7fff225062d3) at /usr/lib/aarch64-linux-gnu/libc.so.6
+pthread_cond_wait at /usr/lib/aarch64-linux-gnu/libc.so.6 (unknown line)
+uv_cond_wait at /workspace/srcdir/libuv/src/unix/thread.c:822
+ijl_task_get_next at /cache/build/builder-armageddon-3/julialang/julia-ci/src/scheduler.c:599
+wait at ./task.jl:1297
+#wait#392 at ./condition.jl:141
+wait at ./condition.jl:136 [inlined]
+_trywait at ./asyncevent.jl:186
+profile_printing_listener at ./Base.jl:335
+#start_profile_listener##0 at ./Base.jl:355
+jfptr_YY.start_profile_listenerYY.YY.0_6755.3 at /home/bot/.julia/juliaup/julia-1.13.1+0.aarch64.linux.gnu/lib/julia/sys.so (unknown line)
+jl_apply at /cache/build/builder-armageddon-3/julialang/julia-ci/src/julia.h:2318 [inlined]
+start_task at /cache/build/builder-armageddon-3/julialang/julia-ci/src/task.c:1285
+unknown function (ip: (nil)) at (unknown file)
+GenericMemory at ./boot.jl:588 [inlined]
+_ at ./mpfr.jl:158 [inlined]
+BigFloat at ./mpfr.jl:154
++ at ./mpfr.jl:579
++ at ./complex.jl:288 [inlined]
+#3 at /home/bot/repos/Mandelbrot.jl/spiderlab/GroundTruth.jl:44
+#setprecision#29 at ./mpfr.jl:1214
+setprecision at ./mpfr.jl:1213 [inlined]
+#exray_in#1 at /home/bot/repos/Mandelbrot.jl/spiderlab/GroundTruth.jl:32 [inlined]
+exray_in at /home/bot/repos/Mandelbrot.jl/spiderlab/GroundTruth.jl:31 [inlined]
+#reference_parameter#14 at /home/bot/repos/Mandelbrot.jl/spiderlab/GroundTruth.jl:150
+reference_parameter at /home/bot/repos/Mandelbrot.jl/spiderlab/GroundTruth.jl:145 [inlined]
+#8 at /home/bot/repos/Mandelbrot.jl/spiderlab/SpiderBench.jl:94
+get! at ./dict.jl:460
+#reference#5 at /home/bot/repos/Mandelbrot.jl/spiderlab/SpiderBench.jl:91 [inlined]
+reference at /home/bot/repos/Mandelbrot.jl/spiderlab/SpiderBench.jl:89 [inlined]
+nuclei_dividing at /home/bot/repos/Mandelbrot.jl/spiderlab/experiments/certify_soundness2.jl:15
+main at /home/bot/repos/Mandelbrot.jl/spiderlab/experiments/certify_soundness2.jl:54
+unknown function (ip: 0x7ffefce3e987) at (unknown file)
+jl_apply at /cache/build/builder-armageddon-3/julialang/julia-ci/src/julia.h:2318 [inlined]
+do_call at /cache/build/builder-armageddon-3/julialang/julia-ci/src/interpreter.c:123
+eval_value at /cache/build/builder-armageddon-3/julialang/julia-ci/src/interpreter.c:243
+eval_stmt_value at /cache/build/builder-armageddon-3/julialang/julia-ci/src/interpreter.c:194 [inlined]
+eval_body at /cache/build/builder-armageddon-3/julialang/julia-ci/src/interpreter.c:693
+jl_interpret_toplevel_thunk at /cache/build/builder-armageddon-3/julialang/julia-ci/src/interpreter.c:884
+jl_toplevel_eval_flex at /cache/build/builder-armageddon-3/julialang/julia-ci/src/toplevel.c:742
+jl_eval_toplevel_stmts at /cache/build/builder-armageddon-3/julialang/julia-ci/src/toplevel.c:585
+jl_toplevel_eval_flex at /cache/build/builder-armageddon-3/julialang/julia-ci/src/toplevel.c:683
+ijl_toplevel_eval at /cache/build/builder-armageddon-3/julialang/julia-ci/src/toplevel.c:754
+ijl_toplevel_eval_in at /cache/build/builder-armageddon-3/julialang/julia-ci/src/toplevel.c:799
+eval at ./boot.jl:489
+include_string at ./loading.jl:3033
+_include at ./loading.jl:3093
+include at ./Base.jl:309
+exec_options at ./client.jl:344
+_start at ./client.jl:577
+jfptr__start_54972.3 at /home/bot/.julia/juliaup/julia-1.13.1+0.aarch64.linux.gnu/lib/julia/sys.so (unknown line)
+jl_apply at /cache/build/builder-armageddon-3/julialang/julia-ci/src/julia.h:2318 [inlined]
+true_main at /cache/build/builder-armageddon-3/julialang/julia-ci/src/jlapi.c:985
+jl_repl_entrypoint at /cache/build/builder-armageddon-3/julialang/julia-ci/src/jlapi.c:1152
+main at /cache/build/builder-armageddon-3/julialang/julia-ci/cli/loader_exe.c:58
+unknown function (ip: 0x7fff224a2f1b) at /usr/lib/aarch64-linux-gnu/libc.so.6
+__libc_start_main at /usr/lib/aarch64-linux-gnu/libc.so.6 (unknown line)
+$x at /home/bot/.julia/juliaup/julia-1.13.1+0.aarch64.linux.gnu/bin/julia (unknown line)
+$x at /home/bot/.julia/juliaup/julia-1.13.1+0.aarch64.linux.gnu/bin/julia (unknown line)
+unknown function (ip: (nil)) at (unknown file)
+Allocations: 626949107302 (Pool: 626949107035; Big: 267); GC: 45189

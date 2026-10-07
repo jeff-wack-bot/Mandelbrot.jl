@@ -1,0 +1,154 @@
+cusp 4 1//15 size=0.08788738020185137 new-f64:ok/2/1.533s  new-bigfeet:ok/2/0.343s  new-bigall:ok/2/4.708s
+cusp 6 1//63 size=0.028247630034860582 new-f64:ok/2/0.867s  new-bigfeet:ok/2/0.004s  new-bigall:ok/2/0.042s
+cusp 8 1//255 size=0.012295456185939012 new-f64:ok/2/0.55s  new-bigfeet:ok/2/0.003s  new-bigall:ok/2/0.07s
+cusp 10 1//1023 size=0.006385759792634585 new-f64:ok/2/0.831s  new-bigfeet:ok/2/0.003s  new-bigall:ok/2/0.072s
+cusp 12 1//4095 size=0.003722325553941622 new-f64:ok/2/0.496s  new-bigfeet:ok/2/0.005s  new-bigall:ok/2/0.094s
+cusp 16 1//65535 size=0.0015802786990348565 new-f64:ok/2/0.644s  new-bigfeet:ok/2/0.007s  new-bigall:ok/2/0.213s
+cusp 20 1//1048575 size=0.0008110028698422102 new-f64:ok/2/0.705s  new-bigfeet:ok/2/0.009s  new-bigall:ok/2/0.302s
+cusp 24 1//16777215 size=0.00046981445578592765 new-f64:ok/2/0.714s  new-bigfeet:ok/2/0.02s  new-bigall:ok/2/0.254s
+cusp 28 1//268435455 size=0.00029601142469367573 new-f64:ok/3/2.087s  new-bigfeet:ok/2/0.024s  new-bigall:ok/2/0.455s
+cusp 32 1//4294967295 size=0.0001983601011689491 new-f64:ok/3/1.123s  new-bigfeet:ok/2/0.019s  new-bigall:ok/2/0.534s
+cusp 40 1//1099511627775 size=0.00010158786638356552 new-bigall:ok/2/0.534s  new-f64:ok/5/2.319s  new-bigfeet:ok/2/0.031s
+cusp 48 1//281474976710655 size=5.8796319497233504e-5 new-bigfeet:ok/2/0.031s  new-f64:ok/5/2.779s  new-bigfeet:ok/2/0.068s
+cusp 64 1//18446744073709551615 size=2.480729863390397e-5 new-bigfeet:ok/2/0.068s  new-f64:wrong/2000/15.1s  new-bigfeet:ok/4/0.101s
+tip 4 7//15 size=0.000991627763402372 new-f64:ok/2/0.003s  new-bigfeet:ok/2/0.005s  new-bigall:ok/2/0.027s
+tip 6 31//63 size=3.5623454059445773e-6 new-f64:ok/2/0.002s  new-bigfeet:ok/2/0.002s  new-bigall:ok/2/0.041s
+tip 8 127//255 size=1.3798716073558416e-8 new-f64:ok/2/0.002s  new-bigfeet:ok/2/0.004s  new-bigall:ok/2/0.087s
+tip 10 511//1023 size=5.386157091869903e-11 new-f64:ok/2/0.002s  new-bigfeet:ok/2/0.003s  new-bigall:ok/2/0.096s
+tip 12 2047//4095 size=2.103843000880752e-13 new-f64:ok/2/0.01s  new-bigfeet:ok/2/0.006s  new-bigall:ok/2/0.113s
+tip 16 32767//65535 size=3.2101940434173e-18 new-f64:unresolved/2/0.005s  new-bigfeet:ok/2/0.006s  new-bigall:ok/2/0.26s
+tip 20 524287//1048575 size=4.8983672491187845e-23 new-f64:unresolved/2/0.013s  new-bigfeet:ok/2/0.009s  new-bigall:ok/2/0.419s
+tip 24 8388607//16777215 size=7.474315259540506e-28 new-f64:unresolved/25/0.034s  new-bigfeet:ok/2/0.016s  new-bigall:ok/2/0.555s
+tip 28 134217727//268435455 size=1.140489999318846e-32 new-f64:unresolved/22/0.051s  new-bigfeet:ok/2/0.017s  new-bigall:ok/2/0.671s
+tip 32 2147483647//4294967295 size=1.7402496327496992e-37 new-f64:unresolved/18/0.044s  new-bigfeet:ok/65/0.418s  new-bigall:ok/2/0.878s
+tip 40 549755813887//1099511627775 size=4.051834421115227e-47 new-bigall:ok/2/0.878s  new-f64:unresolved/10/0.043s  new-bigfeet:ok/81/0.892s
+tip 48 140737488355327//281474976710655 size=9.433912162471626e-57 new-bigfeet:ok/81/0.892s  new-f64:unresolved/2/0.029s  new-bigfeet:ok/97/1.45s
+tip 64 9223372036854775807//18446744073709551615 size=5.11413403079458e-76 new-bigfeet:ok/97/1.45s  new-f64:unresolved/2/0.044s  new-bigfeet:ok/127/2.648s
+approx16 4 1//5 size=0.008482858700517284 new-f64:ok/2/0.001s  new-bigfeet:ok/2/0.001s  new-bigall:ok/2/0.022s
+approx16 6 11//63 size=0.000224065138054797 new-f64:ok/2/0.002s  new-bigfeet:ok/2/0.002s  new-bigall:ok/2/0.044s
+approx16 8 43//255 size=7.041378564566382e-6 new-f64:ok/2/0.002s  new-bigfeet:ok/2/0.003s  new-bigall:ok/2/0.076s
+approx16 10 57//341 size=2.2407655980568595e-7 new-f64:ok/4/0.004s  new-bigfeet:ok/4/0.006s  new-bigall:ok/4/0.142s
+approx16 12 683//4095 size=7.045586057000957e-9 new-f64:ok/9/0.011s  new-bigfeet:ok/9/0.014s  new-bigall:ok/9/0.376s
+approx16 16 3641//21845 size=6.88734375364164e-12 new-f64:ok/14/0.009s  new-bigfeet:ok/14/0.028s  new-bigall:ok/14/0.871s
+approx16 20 174763//1048575 size=6.7255703920977295e-15 new-f64:ok/24/0.025s  new-bigfeet:ok/24/0.067s  new-bigall:ok/24/1.854s
+approx16 24 2796203//16777215 size=6.567928299004074e-18 new-f64:unresolved/34/0.04s  new-bigfeet:ok/34/0.101s  new-bigall:ok/34/3.056s
+approx16 28 14913081//89478485 size=6.413992984455303e-21 new-f64:unresolved/44/0.062s  new-bigfeet:ok/44/0.188s  new-bigall:ok/44/4.792s
+approx16 32 715827883//4294967295 size=6.263665039395102e-24 new-f64:unresolved/54/0.058s  new-bigfeet:ok/54/0.259s  new-bigall:ok/54/5.912s
+approx16 40 61083979321//366503875925 size=5.97349647400295e-30 new-bigall:ok/54/5.912s  new-f64:unresolved/99/0.13s  new-bigfeet:ok/74/0.448s
+approx16 48 46912496118443//281474976710655 size=5.696770166400659e-36 new-bigfeet:ok/74/0.448s  new-f64:unresolved/99/0.176s  new-bigfeet:ok/505/3.164s
+approx16 64 1024819115206086201//6148914691236517205 size=5.1811822835594815e-48 new-bigfeet:ok/505/3.164s  new-f64:unresolved/99/0.27s  new-bigfeet:ok/505/5.142s
+approx14 4 4//15 size=0.008482858700517284 new-f64:ok/2/0.001s  new-bigfeet:ok/2/0.001s  new-bigall:ok/2/0.021s
+approx14 6 16//63 size=6.596108640947993e-5 new-f64:ok/4/0.001s  new-bigfeet:ok/4/0.003s  new-bigall:ok/4/0.061s
+approx14 8 64//255 size=7.042395283077253e-7 new-f64:ok/4/0.002s  new-bigfeet:ok/4/0.004s  new-bigall:ok/4/0.076s
+approx14 10 256//1023 size=7.757356275371082e-9 new-f64:ok/4/0.003s  new-bigfeet:ok/4/0.007s  new-bigall:ok/4/0.124s
+approx14 12 1024//4095 size=8.544208841406159e-11 new-f64:ok/8/0.009s  new-bigfeet:ok/8/0.011s  new-bigall:ok/8/0.235s
+approx14 16 16384//65535 size=1.035159846043145e-14 new-f64:ok/23/0.016s  new-bigfeet:ok/23/0.041s  new-bigall:ok/23/1.25s
+approx14 20 262144//1048575 size=1.2539746079137996e-18 new-f64:unresolved/31/0.022s  new-bigfeet:ok/31/0.071s  new-bigall:ok/31/2.29s
+approx14 24 4194304//16777215 size=1.5190436793265903e-22 new-f64:unresolved/39/0.038s  new-bigfeet:ok/39/0.137s  new-bigall:ok/39/3.295s
+approx14 28 67108864//268435455 size=1.8401439252429642e-26 new-f64:unresolved/47/0.044s  new-bigfeet:ok/47/0.176s  new-bigall:ok/47/4.849s
+approx14 32 1073741824//4294967295 size=2.2291193540575805e-30 new-f64:unresolved/62/0.068s  new-bigfeet:ok/55/0.246s  new-bigall:ok/55/7.687s
+approx14 40 274877906944//1099511627775 size=3.2711192980728376e-38 new-bigall:ok/55/7.687s  new-f64:unresolved/62/0.107s  new-bigfeet:exception/0/0.61s
+approx14 48 70368744177664//281474976710655 size=4.8002012286814406e-46 new-bigfeet:exception/0/0.61s  new-f64:unresolved/62/0.116s  new-bigfeet:exception/0/0.517s
+approx14 64 4611686018427387904//18446744073709551615 size=1.0336786944087581e-61 new-bigfeet:exception/0/0.517s  new-f64:unresolved/62/0.182s  new-bigfeet:exception/0/0.927s
+random 4 4//5 size=0.008482858700517284 new-f64:ok/2/0.001s  new-bigfeet:ok/2/0.003s  new-bigall:ok/2/0.023s
+random 4 3//5 size=0.1179602276312226 new-f64:ok/2/0.003s  new-bigfeet:ok/2/0.003s  new-bigall:ok/2/0.023s
+random 4 7//15 size=0.000991627763402372 new-f64:ok/2/0.001s  new-bigfeet:ok/2/0.004s  new-bigall:ok/2/0.023s
+random 4 4//5 size=0.008482858700517284 new-f64:ok/2/0.001s  new-bigfeet:ok/2/0.004s  new-bigall:ok/2/0.023s
+random 4 2//15 size=0.08788738020185137 new-f64:ok/2/0.001s  new-bigfeet:ok/2/0.003s  new-bigall:ok/2/0.023s
+random 6 7//9 size=0.00023572239886378592 new-f64:ok/2/0.002s  new-bigfeet:ok/2/0.002s  new-bigall:ok/2/0.049s
+random 6 5//21 size=6.596108640947993e-5 new-f64:ok/2/0.001s  new-bigfeet:ok/2/0.002s  new-bigall:ok/2/0.048s
+random 6 1//21 size=0.0030046345084907187 new-f64:ok/2/0.001s  new-bigfeet:ok/2/0.002s  new-bigall:ok/2/0.034s
+random 6 4//9 size=0.008692229483090832 new-f64:ok/2/0.002s  new-bigfeet:ok/2/0.002s  new-bigall:ok/2/0.036s
+random 6 11//63 size=0.000224065138054797 new-f64:ok/2/0.001s  new-bigfeet:ok/2/0.002s  new-bigall:ok/2/0.047s
+random 8 31//255 size=1.2808651316829778e-5 new-f64:ok/2/0.004s  new-bigfeet:ok/2/0.006s  new-bigall:ok/2/0.062s
+random 8 13//51 size=2.671712476815653e-5 new-f64:ok/3/0.002s  new-bigfeet:ok/3/0.004s  new-bigall:ok/3/0.077s
+random 8 181//255 size=0.030633369077623387 new-f64:ok/2/0.002s  new-bigfeet:ok/2/0.003s  new-bigall:ok/2/0.059s
+random 8 43//255 size=7.041378564566382e-6 new-f64:ok/2/0.002s  new-bigfeet:ok/2/0.003s  new-bigall:ok/2/0.053s
+random 8 44//255 size=7.041378564566382e-6 new-f64:ok/2/0.002s  new-bigfeet:ok/2/0.003s  new-bigall:ok/2/0.064s
+random 10 365//1023 size=8.566075916849749e-6 new-f64:ok/4/0.003s  new-bigfeet:ok/4/0.005s  new-bigall:ok/4/0.129s
+random 10 43//1023 size=2.097554265630702e-6 new-f64:ok/3/0.003s  new-bigfeet:ok/3/0.005s  new-bigall:ok/3/0.128s
+random 10 925//1023 size=0.00043778841445407034 new-f64:ok/2/0.002s  new-bigfeet:ok/2/0.004s  new-bigall:ok/2/0.107s
+random 10 82//93 size=2.2957718232079606e-6 new-f64:ok/2/0.002s  new-bigfeet:ok/2/0.004s  new-bigall:ok/2/0.081s
+random 10 89//341 size=2.3193763438571876e-6 new-f64:ok/2/0.014s  new-bigfeet:ok/2/0.007s  new-bigall:ok/2/0.071s
+random 12 2188//4095 size=5.454522041134631e-8 new-f64:ok/2/0.003s  new-bigfeet:ok/2/0.01s  new-bigall:ok/2/0.096s
+random 12 1124//4095 size=5.2736306633194235e-6 new-f64:ok/3/0.004s  new-bigfeet:ok/3/0.006s  new-bigall:ok/3/0.136s
+random 12 10//13 size=2.1712470090480533e-8 new-f64:ok/3/0.008s  new-bigfeet:ok/3/0.006s  new-bigall:ok/3/0.144s
+random 12 335//819 size=1.1110972921632217e-6 new-f64:ok/2/0.008s  new-bigfeet:ok/2/0.01s  new-bigall:ok/2/0.092s
+random 12 131//585 size=9.521761884541039e-8 new-f64:ok/4/0.008s  new-bigfeet:ok/4/0.007s  new-bigall:ok/4/0.174s
+random 16 51088//65535 size=1.3750961918311128e-10 new-f64:ok/6/0.007s  new-bigfeet:ok/6/0.017s  new-bigall:ok/6/0.436s
+random 16 40196//65535 size=8.53552102458535e-11 new-f64:ok/10/0.008s  new-bigfeet:ok/10/0.02s  new-bigall:ok/10/0.603s
+random 16 17624//21845 size=8.370496693842952e-11 new-f64:ok/9/0.008s  new-bigfeet:ok/9/0.025s  new-bigall:ok/9/0.654s
+random 16 16988//21845 size=7.428011671036974e-11 new-f64:ok/2/0.009s  new-bigfeet:ok/2/0.006s  new-bigall:ok/2/0.187s
+random 16 16238//65535 size=1.2940879134369687e-13 new-f64:ok/9/0.009s  new-bigfeet:ok/9/0.022s  new-bigall:ok/9/0.675s
+random 20 408434//1048575 size=9.76072416493548e-13 new-f64:ok/11/0.01s  new-bigfeet:ok/11/0.034s  new-bigall:ok/11/0.766s
+random 20 382801//1048575 size=6.427721505884736e-11 new-f64:ok/9/0.01s  new-bigfeet:ok/9/0.035s  new-bigall:ok/9/0.641s
+random 20 143174//349525 size=8.577687830105477e-11 new-f64:ok/15/0.013s  new-bigfeet:ok/15/0.035s  new-bigall:ok/15/1.088s
+random 20 28459//95325 size=2.4213480933641306e-11 new-f64:ok/7/0.008s  new-bigfeet:ok/7/0.02s  new-bigall:ok/7/0.552s
+random 20 242588//349525 size=2.936804834210126e-9 new-f64:ok/2/0.011s  new-bigfeet:ok/2/0.009s  new-bigall:ok/2/0.241s
+random 24 4510621//16777215 size=2.8699069497432774e-13 new-f64:ok/15/0.02s  new-bigfeet:ok/15/0.088s  new-bigall:ok/15/1.507s
+random 24 10386338//16777215 size=7.788217864020821e-13 new-f64:ok/10/0.014s  new-bigfeet:ok/10/0.04s  new-bigall:ok/10/0.909s
+random 24 350464//430185 size=5.014442177775767e-19 new-f64:unresolved/8/0.012s  new-bigfeet:ok/8/0.028s  new-bigall:ok/8/0.894s
+random 24 4577801//5592405 size=5.313938187329781e-15 new-f64:ok/11/0.016s  new-bigfeet:ok/11/0.04s  new-bigall:ok/11/1.107s
+random 24 749950//3355443 size=2.362865441311632e-16 new-f64:ok/8/0.013s  new-bigfeet:ok/8/0.03s  new-bigall:ok/8/0.988s
+random 28 42340793//53687091 size=6.105494746907303e-17 new-f64:unresolved/12/0.024s  new-bigfeet:ok/12/0.052s  new-bigall:ok/12/1.515s
+random 28 130039717//268435455 size=4.940061743910648e-22 new-f64:unresolved/10/0.021s  new-bigfeet:ok/10/0.043s  new-bigall:ok/10/1.457s
+random 28 144954601//268435455 size=7.158238126765649e-17 new-f64:unresolved/2/0.019s  new-bigfeet:ok/2/0.013s  new-bigall:ok/2/0.289s
+random 28 68692802//268435455 size=4.331028842059509e-17 new-f64:unresolved/7/0.019s  new-bigfeet:ok/7/0.036s  new-bigall:ok/7/0.98s
+random 28 37868736//89478485 size=2.4584190519638018e-20 new-f64:unresolved/14/0.022s  new-bigfeet:ok/14/0.06s  new-bigall:ok/14/2.024s
+random 32 3681839774//4294967295 size=5.823954508611025e-15 new-f64:ok/46/0.063s  new-bigfeet:ok/46/0.176s  new-bigall:ok/46/7.648s
+random 32 287005715//858993459 size=2.193655046445205e-17 new-f64:unresolved/16/0.029s  new-bigfeet:ok/16/0.053s  new-bigall:ok/16/2.711s
+random 32 617378944//1431655765 size=6.521515816546798e-21 new-f64:unresolved/6/0.023s  new-bigfeet:ok/6/0.032s  new-bigall:ok/6/1.205s
+random 32 2736772861//4294967295 size=2.211186780650004e-23 new-f64:unresolved/12/0.031s  new-bigfeet:ok/12/0.068s  new-bigall:ok/12/2.078s
+random 32 2027263381//4294967295 size=5.029457484036809e-20 new-f64:unresolved/2/0.012s  new-bigfeet:ok/2/0.018s  new-bigall:ok/2/0.396s
+random 40 6727726447//26817356775 size=1.9700675116259786e-22 new-bigall:ok/2/0.396s  new-f64:unresolved/13/0.034s  new-bigfeet:ok/13/0.096s
+random 40 12477791593//19991120505 size=7.338774989335219e-28 new-bigfeet:ok/13/0.096s  new-f64:unresolved/14/0.044s  new-bigfeet:ok/14/0.09s
+random 40 94946162534//1099511627775 size=8.023884733314323e-28 new-bigfeet:ok/14/0.09s  new-f64:unresolved/22/0.06s  new-bigfeet:ok/22/0.146s
+random 40 698175566828//1099511627775 size=2.818052996537081e-23 new-bigfeet:ok/22/0.146s  new-f64:unresolved/13/0.035s  new-bigfeet:ok/13/0.101s
+random 40 490276456616//1099511627775 size=6.9327309616493e-26 new-bigfeet:ok/13/0.101s  new-f64:unresolved/21/0.045s  new-bigfeet:ok/21/0.127s
+random 48 27096732139573//93824992236885 size=3.340773120609093e-30 new-bigfeet:ok/21/0.127s  new-f64:unresolved/33/0.092s  new-bigfeet:ok/33/0.272s
+random 48 98975029161413//281474976710655 size=1.8080156961964347e-29 new-bigfeet:ok/33/0.272s  new-f64:unresolved/24/0.075s  new-bigfeet:ok/24/0.113s
+random 48 10395612215992//13403570319555 size=1.76879475423277e-30 new-bigfeet:ok/24/0.113s  new-f64:unresolved/16/0.074s  new-bigfeet:ok/16/0.188s
+random 48 23258826423737//31274997412295 size=2.168827285330597e-30 new-bigfeet:ok/16/0.188s  new-f64:unresolved/14/0.059s  new-bigfeet:ok/14/0.184s
+random 48 3374776596261//4467856773185 size=2.380558966898378e-29 new-bigfeet:ok/14/0.184s  new-f64:unresolved/11/0.049s  new-bigfeet:ok/11/0.112s
+random 64 14811639095177288716//18446744073709551615 size=1.8772131438059663e-40 new-bigfeet:ok/11/0.112s  new-f64:unresolved/131/0.448s  new-bigfeet:ok/16/0.267s
+random 64 2060122147712283629//6148914691236517205 size=3.925731460398375e-37 new-bigfeet:ok/16/0.267s  new-f64:unresolved/152/0.483s  new-bigfeet:ok/23/0.186s
+random 64 244437149896769116//6148914691236517205 size=2.8480603295382643e-36 new-bigfeet:ok/23/0.186s  new-f64:unresolved/181/0.663s  new-bigfeet:ok/20/0.22s
+random 64 1141003829117670156//1229782938247303441 size=2.1667215127566868e-35 new-bigfeet:ok/20/0.22s  new-f64:unresolved/164/0.628s  new-bigfeet:ok/28/0.386s
+random 64 2331074328763774411//6148914691236517205 size=1.384068280154136e-41 new-bigfeet:ok/28/0.386s  new-f64:unresolved/73/0.217s  new-bigfeet:ok/18/0.305s
+doubling 4 2//5 size=0.1179602276312226 new-f64:ok/2/0.001s  new-bigfeet:ok/2/0.001s  new-bigall:ok/2/0.023s
+doubling 8 7//17 size=0.025903317886204348 new-f64:ok/2/0.002s  new-bigfeet:ok/2/0.003s  new-bigall:ok/2/0.049s
+doubling 16 106//257 size=0.005574904503817612 new-f64:ok/2/0.004s  new-bigfeet:ok/2/0.006s  new-bigall:ok/2/0.168s
+doubling 32 27031//65537 size=0.0011952885871637953 new-f64:ok/46/0.057s  new-bigfeet:ok/46/0.143s  new-bigall:ok/46/4.157s
+doubling 64 1771476586//4294967297 size=0.0002560528805327893 new-bigall:ok/46/4.157s  new-f64:ok/100/0.184s  new-bigfeet:ok/100/0.496s
+┌ Warning: orbit angles of 1//281474976710655 are only 3.5527136788005136e-15 apart; legs in Float64 cannot separate their shoulders. Use legs=BigFloat (slow) for reliable results.
+└ @ Mandelbrot ~/repos/Mandelbrot.jl/src/spidermap.jl:661
+┌ Warning: orbit angles of 1//281474976710655 are only 3.5527136788005136e-15 apart; legs in Float64 cannot separate their shoulders. Use legs=BigFloat (slow) for reliable results.
+└ @ Mandelbrot ~/repos/Mandelbrot.jl/src/spidermap.jl:661
+┌ Warning: orbit angles of 1//18446744073709551615 are only 5.421010862427522e-20 apart; legs in Float64 cannot separate their shoulders. Use legs=BigFloat (slow) for reliable results.
+└ @ Mandelbrot ~/repos/Mandelbrot.jl/src/spidermap.jl:661
+┌ Warning: orbit angles of 1//18446744073709551615 are only 5.421010862427522e-20 apart; legs in Float64 cannot separate their shoulders. Use legs=BigFloat (slow) for reliable results.
+└ @ Mandelbrot ~/repos/Mandelbrot.jl/src/spidermap.jl:661
+┌ Warning: orbit angles of 140737488355327//281474976710655 are only 3.5527136788005136e-15 apart; legs in Float64 cannot separate their shoulders. Use legs=BigFloat (slow) for reliable results.
+└ @ Mandelbrot ~/repos/Mandelbrot.jl/src/spidermap.jl:661
+┌ Warning: orbit angles of 140737488355327//281474976710655 are only 3.5527136788005136e-15 apart; legs in Float64 cannot separate their shoulders. Use legs=BigFloat (slow) for reliable results.
+└ @ Mandelbrot ~/repos/Mandelbrot.jl/src/spidermap.jl:661
+┌ Warning: orbit angles of 9223372036854775807//18446744073709551615 are only 5.421010862427522e-20 apart; legs in Float64 cannot separate their shoulders. Use legs=BigFloat (slow) for reliable results.
+└ @ Mandelbrot ~/repos/Mandelbrot.jl/src/spidermap.jl:661
+┌ Warning: orbit angles of 9223372036854775807//18446744073709551615 are only 5.421010862427522e-20 apart; legs in Float64 cannot separate their shoulders. Use legs=BigFloat (slow) for reliable results.
+└ @ Mandelbrot ~/repos/Mandelbrot.jl/src/spidermap.jl:661
+┌ Warning: orbit angles of 46912496118443//281474976710655 are only 1.065814103640154e-14 apart; legs in Float64 cannot separate their shoulders. Use legs=BigFloat (slow) for reliable results.
+└ @ Mandelbrot ~/repos/Mandelbrot.jl/src/spidermap.jl:661
+┌ Warning: orbit angles of 46912496118443//281474976710655 are only 1.065814103640154e-14 apart; legs in Float64 cannot separate their shoulders. Use legs=BigFloat (slow) for reliable results.
+└ @ Mandelbrot ~/repos/Mandelbrot.jl/src/spidermap.jl:661
+┌ Warning: orbit angles of 1024819115206086201//6148914691236517205 are only 1.6263032587282567e-19 apart; legs in Float64 cannot separate their shoulders. Use legs=BigFloat (slow) for reliable results.
+└ @ Mandelbrot ~/repos/Mandelbrot.jl/src/spidermap.jl:661
+┌ Warning: orbit angles of 1024819115206086201//6148914691236517205 are only 1.6263032587282567e-19 apart; legs in Float64 cannot separate their shoulders. Use legs=BigFloat (slow) for reliable results.
+└ @ Mandelbrot ~/repos/Mandelbrot.jl/src/spidermap.jl:661
+┌ Warning: orbit angles of 70368744177664//281474976710655 are only 3.5527136788005136e-15 apart; legs in Float64 cannot separate their shoulders. Use legs=BigFloat (slow) for reliable results.
+└ @ Mandelbrot ~/repos/Mandelbrot.jl/src/spidermap.jl:661
+┌ Warning: orbit angles of 70368744177664//281474976710655 are only 3.5527136788005136e-15 apart; legs in Float64 cannot separate their shoulders. Use legs=BigFloat (slow) for reliable results.
+└ @ Mandelbrot ~/repos/Mandelbrot.jl/src/spidermap.jl:661
+┌ Warning: orbit angles of 4611686018427387904//18446744073709551615 are only 5.421010862427522e-20 apart; legs in Float64 cannot separate their shoulders. Use legs=BigFloat (slow) for reliable results.
+└ @ Mandelbrot ~/repos/Mandelbrot.jl/src/spidermap.jl:661
+┌ Warning: orbit angles of 4611686018427387904//18446744073709551615 are only 5.421010862427522e-20 apart; legs in Float64 cannot separate their shoulders. Use legs=BigFloat (slow) for reliable results.
+└ @ Mandelbrot ~/repos/Mandelbrot.jl/src/spidermap.jl:661
