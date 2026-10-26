@@ -14,7 +14,7 @@ radius `SPIDER_RADIUS` at angle ≈ θ_i, continued radially to infinity) to its
 One step of the spider map replaces leg i by the lift under p_λ of leg σ(i), where
 σ(i) is the index of 2θ_i in the orbit (`goestoidx`).
 
-Implementation notes (see spiderlab/REPORT.md for the measurements behind them):
+Implementation notes (the measurements behind them come from the scripts in spiderlab/):
 
 * Lifting a polyline by continuation is exact: a straight segment [a,b] that misses
   the origin subtends an angle < π at 0, so its continuous square root subtends an
