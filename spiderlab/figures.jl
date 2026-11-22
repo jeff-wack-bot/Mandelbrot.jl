@@ -1,4 +1,4 @@
-# Figures for REPORT.md.  julia --project=spiderlab spiderlab/figures.jl
+# Figures from results/*.csv.  julia --project=spiderlab spiderlab/figures.jl
 include(joinpath(@__DIR__, "SpiderBench.jl")); using .SpiderBench
 using CairoMakie, Statistics
 

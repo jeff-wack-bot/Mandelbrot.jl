@@ -14,8 +14,7 @@ radius `SPIDER_RADIUS` at angle ≈ θ_i, continued radially to infinity) to its
 One step of the spider map replaces leg i by the lift under p_λ of leg σ(i), where
 σ(i) is the index of 2θ_i in the orbit (`goestoidx`).
 
-One step follows §9 ("A Comment on Implementation") of the paper: first the new feet,
-then the new legs.
+Implementation notes (the measurements behind them come from the scripts in spiderlab/):
 
 * New feet. Let w̃ be the preimage of z_{σ(i)} closest to 0, i.e. the end of the lift of
   the segment [z_2, z_{σ(i)}] that starts at 0. It lies in sector A (the one containing 0)
