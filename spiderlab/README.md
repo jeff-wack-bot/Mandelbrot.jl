@@ -10,6 +10,7 @@ julia --project=spiderlab -e 'using Pkg; Pkg.instantiate()'
 | file | purpose |
 |---|---|
 | `LegacySpider.jl` | verbatim copy of the spider implementation at upstream `619df42`, wrapped in a module. `LegacySpider.FIX_GETINDEX[] = true` switches on the corrected `Sequence` indexing. |
+| `UpgradeSpider.jl` | verbatim copy of `src/spidermap.jl` at `38caca9` (shoulder-first: legs lifted from the shoulder, feet follow the legs, metric refinement), wrapped in a module. `run_new(θ; mod=UpgradeSpider)` runs it. |
 | `GroundTruth.jl` | independent reference values: parameter-ray tracing (`exray_in`) + Newton for the nucleus / Misiurewicz point, all in BigFloat. Shares no code with the spider. |
 | `SpiderBench.jl` | harness: angle families (`periodic_angles`, `preperiodic_angles`, `family`), runners `run_legacy` / `run_new` (time, bytes, points, iterations), classification against the ground truth, CSV I/O. |
 | `analyze.jl` | `summarize(rows, key)` tables. |
@@ -18,6 +19,8 @@ julia --project=spiderlab -e 'using Pkg; Pkg.instantiate()'
 | `experiments/scaling.jl` | families × period up to 64: legacy, Float64, BigFloat feet, BigFloat feet+legs. |
 | `experiments/history_ablation.jl` | error / point-count histories; refinement and pruning ablation. |
 | `experiments/certify_soundness*.jl` | adversarial test of `certify`: every wrong nucleus / Misiurewicz point offered as a candidate. |
+| `experiments/compare_feetfirst.jl` | feet-first (current) vs shoulder-first: `sweep` (as `sweep_small`, plus the no-refinement ablation), `scaling` (families × period, Float64 and BigFloat feet), `timing`. |
+| `experiments/lift_correctness.jl` | per-step check of the lifting: every step of both implementations is compared with one step of the unrefined, unpruned map applied to the same spider with its legs densified (pieces < 1e-3 of their distance to 0). |
 | `experiments/profile.jl` | BenchmarkTools + Profile of `spider_map`. |
 
 Status classes used everywhere: **ok** (|c − c_ref| ≤ 1e-10·max(1,|c|) and inside the right

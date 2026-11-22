@@ -1,0 +1,187 @@
+cusp 4 upgrade-f64:ok/2  upgrade-bigfeet:ok/2  feetfirst-f64:ok/2  feetfirst-bigfeet:ok/2
+cusp 6 upgrade-f64:ok/2  upgrade-bigfeet:ok/2  feetfirst-f64:ok/2  feetfirst-bigfeet:ok/2
+cusp 8 upgrade-f64:ok/2  upgrade-bigfeet:ok/2  feetfirst-f64:ok/2  feetfirst-bigfeet:ok/2
+cusp 10 upgrade-f64:ok/2  upgrade-bigfeet:ok/2  feetfirst-f64:ok/2  feetfirst-bigfeet:ok/2
+cusp 12 upgrade-f64:ok/2  upgrade-bigfeet:ok/2  feetfirst-f64:ok/2  feetfirst-bigfeet:ok/2
+cusp 16 upgrade-f64:ok/2  upgrade-bigfeet:ok/2  feetfirst-f64:ok/2  feetfirst-bigfeet:ok/2
+cusp 20 upgrade-f64:ok/2  upgrade-bigfeet:ok/2  feetfirst-f64:ok/2  feetfirst-bigfeet:ok/2
+cusp 24 upgrade-f64:ok/2  upgrade-bigfeet:ok/2  feetfirst-f64:ok/2  feetfirst-bigfeet:ok/2
+cusp 28 upgrade-f64:ok/3  upgrade-bigfeet:ok/2  feetfirst-f64:ok/3  feetfirst-bigfeet:ok/2
+cusp 32 upgrade-f64:ok/3  upgrade-bigfeet:ok/2  feetfirst-f64:ok/3  feetfirst-bigfeet:ok/2
+cusp 40 upgrade-f64:ok/5  upgrade-bigfeet:ok/2  feetfirst-f64:ok/5  feetfirst-bigfeet:ok/2
+cusp 48 upgrade-f64:ok/5  upgrade-bigfeet:ok/2  feetfirst-f64:ok/5  feetfirst-bigfeet:ok/2
+cusp 64 upgrade-f64:wrong/2000  upgrade-bigfeet:ok/4  feetfirst-f64:wrong/2000  feetfirst-bigfeet:ok/4
+tip 4 upgrade-f64:ok/2  upgrade-bigfeet:ok/2  feetfirst-f64:ok/2  feetfirst-bigfeet:ok/2
+tip 6 upgrade-f64:ok/2  upgrade-bigfeet:ok/2  feetfirst-f64:ok/2  feetfirst-bigfeet:ok/2
+tip 8 upgrade-f64:ok/2  upgrade-bigfeet:ok/2  feetfirst-f64:ok/2  feetfirst-bigfeet:ok/2
+tip 10 upgrade-f64:ok/2  upgrade-bigfeet:ok/2  feetfirst-f64:ok/2  feetfirst-bigfeet:ok/2
+tip 12 upgrade-f64:ok/2  upgrade-bigfeet:ok/2  feetfirst-f64:ok/2  feetfirst-bigfeet:ok/2
+tip 16 upgrade-f64:unresolved/2  upgrade-bigfeet:ok/2  feetfirst-f64:unresolved/2  feetfirst-bigfeet:ok/2
+tip 20 upgrade-f64:unresolved/2  upgrade-bigfeet:ok/2  feetfirst-f64:unresolved/2  feetfirst-bigfeet:ok/2
+tip 24 upgrade-f64:unresolved/25  upgrade-bigfeet:ok/2  feetfirst-f64:unresolved/25  feetfirst-bigfeet:ok/2
+tip 28 upgrade-f64:unresolved/22  upgrade-bigfeet:ok/2  feetfirst-f64:unresolved/22  feetfirst-bigfeet:ok/2
+tip 32 upgrade-f64:unresolved/18  upgrade-bigfeet:ok/65  feetfirst-f64:unresolved/18  feetfirst-bigfeet:ok/65
+tip 40 upgrade-f64:unresolved/10  upgrade-bigfeet:ok/81  feetfirst-f64:unresolved/10  feetfirst-bigfeet:ok/81
+tip 48 upgrade-f64:unresolved/2  upgrade-bigfeet:ok/97  feetfirst-f64:unresolved/2  feetfirst-bigfeet:ok/97
+tip 64 upgrade-f64:unresolved/2  upgrade-bigfeet:ok/127  feetfirst-f64:unresolved/2  feetfirst-bigfeet:ok/127
+approx16 4 upgrade-f64:ok/2  upgrade-bigfeet:ok/2  feetfirst-f64:ok/2  feetfirst-bigfeet:ok/2
+approx16 6 upgrade-f64:ok/2  upgrade-bigfeet:ok/2  feetfirst-f64:ok/2  feetfirst-bigfeet:ok/2
+approx16 8 upgrade-f64:ok/2  upgrade-bigfeet:ok/2  feetfirst-f64:ok/2  feetfirst-bigfeet:ok/2
+approx16 10 upgrade-f64:ok/4  upgrade-bigfeet:ok/4  feetfirst-f64:ok/4  feetfirst-bigfeet:ok/4
+approx16 12 upgrade-f64:ok/9  upgrade-bigfeet:ok/9  feetfirst-f64:ok/9  feetfirst-bigfeet:ok/9
+approx16 16 upgrade-f64:ok/14  upgrade-bigfeet:ok/14  feetfirst-f64:ok/22  feetfirst-bigfeet:ok/22
+approx16 20 upgrade-f64:ok/24  upgrade-bigfeet:ok/24  feetfirst-f64:ok/32  feetfirst-bigfeet:ok/32
+approx16 24 upgrade-f64:unresolved/34  upgrade-bigfeet:ok/34  feetfirst-f64:unresolved/58  feetfirst-bigfeet:ok/58
+approx16 28 upgrade-f64:unresolved/44  upgrade-bigfeet:ok/44  feetfirst-f64:unresolved/72  feetfirst-bigfeet:ok/72
+approx16 32 upgrade-f64:unresolved/54  upgrade-bigfeet:ok/54  feetfirst-f64:unresolved/82  feetfirst-bigfeet:ok/82
+approx16 40 upgrade-f64:unresolved/99  upgrade-bigfeet:ok/74  feetfirst-f64:unresolved/99  feetfirst-bigfeet:ok/101
+approx16 48 upgrade-f64:unresolved/99  upgrade-bigfeet:ok/505  feetfirst-f64:unresolved/99  feetfirst-bigfeet:ok/505
+approx16 64 upgrade-f64:unresolved/99  upgrade-bigfeet:ok/505  feetfirst-f64:unresolved/99  feetfirst-bigfeet:ok/505
+approx14 4 upgrade-f64:ok/2  upgrade-bigfeet:ok/2  feetfirst-f64:ok/2  feetfirst-bigfeet:ok/2
+approx14 6 upgrade-f64:ok/4  upgrade-bigfeet:ok/4  feetfirst-f64:ok/4  feetfirst-bigfeet:ok/4
+approx14 8 upgrade-f64:ok/4  upgrade-bigfeet:ok/4  feetfirst-f64:ok/4  feetfirst-bigfeet:ok/4
+approx14 10 upgrade-f64:ok/4  upgrade-bigfeet:ok/4  feetfirst-f64:ok/4  feetfirst-bigfeet:ok/4
+approx14 12 upgrade-f64:ok/8  upgrade-bigfeet:ok/8  feetfirst-f64:ok/8  feetfirst-bigfeet:ok/8
+approx14 16 upgrade-f64:ok/23  upgrade-bigfeet:ok/23  feetfirst-f64:ok/25  feetfirst-bigfeet:ok/25
+approx14 20 upgrade-f64:unresolved/31  upgrade-bigfeet:ok/31  feetfirst-f64:unresolved/33  feetfirst-bigfeet:ok/33
+approx14 24 upgrade-f64:unresolved/39  upgrade-bigfeet:ok/39  feetfirst-f64:unresolved/41  feetfirst-bigfeet:ok/41
+approx14 28 upgrade-f64:unresolved/47  upgrade-bigfeet:ok/47  feetfirst-f64:unresolved/61  feetfirst-bigfeet:ok/49
+approx14 32 upgrade-f64:unresolved/62  upgrade-bigfeet:ok/55  feetfirst-f64:unresolved/62  feetfirst-bigfeet:ok/57
+approx14 40 upgrade-f64:unresolved/62  upgrade-bigfeet:ok/168  feetfirst-f64:unresolved/62  feetfirst-bigfeet:ok/168
+approx14 48 upgrade-f64:unresolved/62  upgrade-bigfeet:ok/200  feetfirst-f64:unresolved/62  feetfirst-bigfeet:ok/200
+approx14 64 upgrade-f64:unresolved/62  upgrade-bigfeet:ok/264  feetfirst-f64:unresolved/62  feetfirst-bigfeet:ok/264
+random 4 upgrade-f64:ok/2  upgrade-bigfeet:ok/2  feetfirst-f64:ok/2  feetfirst-bigfeet:ok/2
+random 4 upgrade-f64:ok/2  upgrade-bigfeet:ok/2  feetfirst-f64:ok/2  feetfirst-bigfeet:ok/2
+random 4 upgrade-f64:ok/2  upgrade-bigfeet:ok/2  feetfirst-f64:ok/2  feetfirst-bigfeet:ok/2
+random 4 upgrade-f64:ok/2  upgrade-bigfeet:ok/2  feetfirst-f64:ok/2  feetfirst-bigfeet:ok/2
+random 4 upgrade-f64:ok/2  upgrade-bigfeet:ok/2  feetfirst-f64:ok/2  feetfirst-bigfeet:ok/2
+random 6 upgrade-f64:ok/2  upgrade-bigfeet:ok/2  feetfirst-f64:ok/2  feetfirst-bigfeet:ok/2
+random 6 upgrade-f64:ok/2  upgrade-bigfeet:ok/2  feetfirst-f64:ok/2  feetfirst-bigfeet:ok/2
+random 6 upgrade-f64:ok/2  upgrade-bigfeet:ok/2  feetfirst-f64:ok/2  feetfirst-bigfeet:ok/2
+random 6 upgrade-f64:ok/2  upgrade-bigfeet:ok/2  feetfirst-f64:ok/2  feetfirst-bigfeet:ok/2
+random 6 upgrade-f64:ok/2  upgrade-bigfeet:ok/2  feetfirst-f64:ok/2  feetfirst-bigfeet:ok/2
+random 8 upgrade-f64:ok/2  upgrade-bigfeet:ok/2  feetfirst-f64:ok/2  feetfirst-bigfeet:ok/2
+random 8 upgrade-f64:ok/3  upgrade-bigfeet:ok/3  feetfirst-f64:ok/3  feetfirst-bigfeet:ok/3
+random 8 upgrade-f64:ok/2  upgrade-bigfeet:ok/2  feetfirst-f64:ok/2  feetfirst-bigfeet:ok/2
+random 8 upgrade-f64:ok/2  upgrade-bigfeet:ok/2  feetfirst-f64:ok/2  feetfirst-bigfeet:ok/2
+random 8 upgrade-f64:ok/2  upgrade-bigfeet:ok/2  feetfirst-f64:ok/2  feetfirst-bigfeet:ok/2
+random 10 upgrade-f64:ok/4  upgrade-bigfeet:ok/4  feetfirst-f64:ok/4  feetfirst-bigfeet:ok/4
+random 10 upgrade-f64:ok/3  upgrade-bigfeet:ok/3  feetfirst-f64:ok/3  feetfirst-bigfeet:ok/3
+random 10 upgrade-f64:ok/2  upgrade-bigfeet:ok/2  feetfirst-f64:ok/2  feetfirst-bigfeet:ok/2
+random 10 upgrade-f64:ok/2  upgrade-bigfeet:ok/2  feetfirst-f64:ok/2  feetfirst-bigfeet:ok/2
+random 10 upgrade-f64:ok/2  upgrade-bigfeet:ok/2  feetfirst-f64:ok/2  feetfirst-bigfeet:ok/2
+random 12 upgrade-f64:ok/2  upgrade-bigfeet:ok/2  feetfirst-f64:ok/2  feetfirst-bigfeet:ok/2
+random 12 upgrade-f64:ok/3  upgrade-bigfeet:ok/3  feetfirst-f64:ok/3  feetfirst-bigfeet:ok/3
+random 12 upgrade-f64:ok/3  upgrade-bigfeet:ok/3  feetfirst-f64:ok/3  feetfirst-bigfeet:ok/3
+random 12 upgrade-f64:ok/2  upgrade-bigfeet:ok/2  feetfirst-f64:ok/2  feetfirst-bigfeet:ok/2
+random 12 upgrade-f64:ok/4  upgrade-bigfeet:ok/4  feetfirst-f64:ok/4  feetfirst-bigfeet:ok/4
+random 16 upgrade-f64:ok/6  upgrade-bigfeet:ok/6  feetfirst-f64:ok/6  feetfirst-bigfeet:ok/6
+random 16 upgrade-f64:ok/10  upgrade-bigfeet:ok/10  feetfirst-f64:ok/11  feetfirst-bigfeet:ok/11
+random 16 upgrade-f64:ok/9  upgrade-bigfeet:ok/9  feetfirst-f64:ok/9  feetfirst-bigfeet:ok/9
+random 16 upgrade-f64:ok/2  upgrade-bigfeet:ok/2  feetfirst-f64:ok/2  feetfirst-bigfeet:ok/2
+random 16 upgrade-f64:ok/9  upgrade-bigfeet:ok/9  feetfirst-f64:ok/9  feetfirst-bigfeet:ok/9
+random 20 upgrade-f64:ok/11  upgrade-bigfeet:ok/11  feetfirst-f64:ok/11  feetfirst-bigfeet:ok/11
+random 20 upgrade-f64:ok/9  upgrade-bigfeet:ok/9  feetfirst-f64:ok/13  feetfirst-bigfeet:ok/13
+random 20 upgrade-f64:ok/15  upgrade-bigfeet:ok/15  feetfirst-f64:ok/15  feetfirst-bigfeet:ok/15
+random 20 upgrade-f64:ok/7  upgrade-bigfeet:ok/7  feetfirst-f64:ok/7  feetfirst-bigfeet:ok/7
+random 20 upgrade-f64:ok/2  upgrade-bigfeet:ok/2  feetfirst-f64:ok/2  feetfirst-bigfeet:ok/2
+random 24 upgrade-f64:ok/15  upgrade-bigfeet:ok/15  feetfirst-f64:ok/15  feetfirst-bigfeet:ok/15
+random 24 upgrade-f64:ok/10  upgrade-bigfeet:ok/10  feetfirst-f64:ok/10  feetfirst-bigfeet:ok/10
+random 24 upgrade-f64:unresolved/8  upgrade-bigfeet:ok/8  feetfirst-f64:unresolved/8  feetfirst-bigfeet:ok/8
+random 24 upgrade-f64:ok/11  upgrade-bigfeet:ok/11  feetfirst-f64:ok/14  feetfirst-bigfeet:ok/14
+random 24 upgrade-f64:ok/8  upgrade-bigfeet:ok/8  feetfirst-f64:ok/8  feetfirst-bigfeet:ok/8
+random 28 upgrade-f64:unresolved/12  upgrade-bigfeet:ok/12  feetfirst-f64:unresolved/20  feetfirst-bigfeet:ok/20
+random 28 upgrade-f64:unresolved/10  upgrade-bigfeet:ok/10  feetfirst-f64:unresolved/10  feetfirst-bigfeet:ok/10
+random 28 upgrade-f64:unresolved/2  upgrade-bigfeet:ok/2  feetfirst-f64:unresolved/2  feetfirst-bigfeet:ok/2
+random 28 upgrade-f64:unresolved/7  upgrade-bigfeet:ok/7  feetfirst-f64:unresolved/7  feetfirst-bigfeet:ok/7
+random 28 upgrade-f64:unresolved/14  upgrade-bigfeet:ok/14  feetfirst-f64:unresolved/15  feetfirst-bigfeet:ok/15
+random 32 upgrade-f64:ok/46  upgrade-bigfeet:ok/46  feetfirst-f64:ok/46  feetfirst-bigfeet:ok/46
+random 32 upgrade-f64:unresolved/16  upgrade-bigfeet:ok/16  feetfirst-f64:unresolved/16  feetfirst-bigfeet:ok/16
+random 32 upgrade-f64:unresolved/6  upgrade-bigfeet:ok/6  feetfirst-f64:unresolved/15  feetfirst-bigfeet:ok/15
+random 32 upgrade-f64:unresolved/12  upgrade-bigfeet:ok/12  feetfirst-f64:unresolved/12  feetfirst-bigfeet:ok/12
+random 32 upgrade-f64:unresolved/2  upgrade-bigfeet:ok/2  feetfirst-f64:unresolved/2  feetfirst-bigfeet:ok/2
+random 40 upgrade-f64:unresolved/13  upgrade-bigfeet:ok/13  feetfirst-f64:unresolved/18  feetfirst-bigfeet:ok/18
+random 40 upgrade-f64:unresolved/14  upgrade-bigfeet:ok/14  feetfirst-f64:unresolved/16  feetfirst-bigfeet:ok/16
+random 40 upgrade-f64:unresolved/22  upgrade-bigfeet:ok/22  feetfirst-f64:unresolved/22  feetfirst-bigfeet:ok/22
+random 40 upgrade-f64:unresolved/13  upgrade-bigfeet:ok/13  feetfirst-f64:unresolved/14  feetfirst-bigfeet:ok/14
+random 40 upgrade-f64:unresolved/21  upgrade-bigfeet:ok/21  feetfirst-f64:unresolved/24  feetfirst-bigfeet:ok/24
+random 48 upgrade-f64:unresolved/33  upgrade-bigfeet:ok/33  feetfirst-f64:unresolved/33  feetfirst-bigfeet:ok/33
+random 48 upgrade-f64:unresolved/24  upgrade-bigfeet:ok/24  feetfirst-f64:unresolved/30  feetfirst-bigfeet:ok/30
+random 48 upgrade-f64:unresolved/16  upgrade-bigfeet:ok/16  feetfirst-f64:unresolved/18  feetfirst-bigfeet:ok/18
+random 48 upgrade-f64:unresolved/14  upgrade-bigfeet:ok/14  feetfirst-f64:unresolved/18  feetfirst-bigfeet:ok/18
+random 48 upgrade-f64:unresolved/11  upgrade-bigfeet:ok/11  feetfirst-f64:unresolved/15  feetfirst-bigfeet:ok/15
+random 64 upgrade-f64:unresolved/131  upgrade-bigfeet:ok/16  feetfirst-f64:unresolved/131  feetfirst-bigfeet:ok/16
+random 64 upgrade-f64:unresolved/152  upgrade-bigfeet:ok/23  feetfirst-f64:unresolved/152  feetfirst-bigfeet:ok/35
+random 64 upgrade-f64:unresolved/181  upgrade-bigfeet:ok/20  feetfirst-f64:unresolved/181  feetfirst-bigfeet:ok/22
+random 64 upgrade-f64:unresolved/164  upgrade-bigfeet:ok/28  feetfirst-f64:unresolved/164  feetfirst-bigfeet:ok/44
+random 64 upgrade-f64:unresolved/73  upgrade-bigfeet:ok/18  feetfirst-f64:unresolved/73  feetfirst-bigfeet:ok/22
+doubling 4 upgrade-f64:ok/2  upgrade-bigfeet:ok/2  feetfirst-f64:ok/2  feetfirst-bigfeet:ok/2
+doubling 8 upgrade-f64:ok/2  upgrade-bigfeet:ok/2  feetfirst-f64:ok/2  feetfirst-bigfeet:ok/2
+doubling 16 upgrade-f64:ok/2  upgrade-bigfeet:ok/2  feetfirst-f64:ok/2  feetfirst-bigfeet:ok/2
+doubling 32 upgrade-f64:ok/46  upgrade-bigfeet:ok/46  feetfirst-f64:ok/46  feetfirst-bigfeet:ok/46
+doubling 64 upgrade-f64:ok/100  upgrade-bigfeet:ok/100  feetfirst-f64:ok/100  feetfirst-bigfeet:ok/100
+┌ Warning: orbit angles of 1//281474976710655 are only 3.5527136788005136e-15 apart; legs in Float64 cannot separate their shoulders. Use legs=BigFloat (slow) for reliable results.
+└ @ Main.SpiderBench.UpgradeSpider ~/.julia/dev/Mandelbrot/spiderlab/UpgradeSpider.jl:682
+┌ Warning: orbit angles of 1//281474976710655 are only 3.5527136788005136e-15 apart; legs in Float64 cannot separate their shoulders. Use legs=BigFloat (slow) for reliable results.
+└ @ Main.SpiderBench.UpgradeSpider ~/.julia/dev/Mandelbrot/spiderlab/UpgradeSpider.jl:682
+┌ Warning: orbit angles of 1//281474976710655 are only 3.5527136788005136e-15 apart; legs in Float64 cannot separate their shoulders. Use legs=BigFloat (slow) for reliable results.
+└ @ Mandelbrot ~/.julia/dev/Mandelbrot/src/spidermap.jl:726
+┌ Warning: orbit angles of 1//281474976710655 are only 3.5527136788005136e-15 apart; legs in Float64 cannot separate their shoulders. Use legs=BigFloat (slow) for reliable results.
+└ @ Mandelbrot ~/.julia/dev/Mandelbrot/src/spidermap.jl:726
+┌ Warning: orbit angles of 1//18446744073709551615 are only 5.421010862427522e-20 apart; legs in Float64 cannot separate their shoulders. Use legs=BigFloat (slow) for reliable results.
+└ @ Main.SpiderBench.UpgradeSpider ~/.julia/dev/Mandelbrot/spiderlab/UpgradeSpider.jl:682
+┌ Warning: orbit angles of 1//18446744073709551615 are only 5.421010862427522e-20 apart; legs in Float64 cannot separate their shoulders. Use legs=BigFloat (slow) for reliable results.
+└ @ Main.SpiderBench.UpgradeSpider ~/.julia/dev/Mandelbrot/spiderlab/UpgradeSpider.jl:682
+┌ Warning: orbit angles of 1//18446744073709551615 are only 5.421010862427522e-20 apart; legs in Float64 cannot separate their shoulders. Use legs=BigFloat (slow) for reliable results.
+└ @ Mandelbrot ~/.julia/dev/Mandelbrot/src/spidermap.jl:726
+┌ Warning: orbit angles of 1//18446744073709551615 are only 5.421010862427522e-20 apart; legs in Float64 cannot separate their shoulders. Use legs=BigFloat (slow) for reliable results.
+└ @ Mandelbrot ~/.julia/dev/Mandelbrot/src/spidermap.jl:726
+┌ Warning: orbit angles of 140737488355327//281474976710655 are only 3.5527136788005136e-15 apart; legs in Float64 cannot separate their shoulders. Use legs=BigFloat (slow) for reliable results.
+└ @ Main.SpiderBench.UpgradeSpider ~/.julia/dev/Mandelbrot/spiderlab/UpgradeSpider.jl:682
+┌ Warning: orbit angles of 140737488355327//281474976710655 are only 3.5527136788005136e-15 apart; legs in Float64 cannot separate their shoulders. Use legs=BigFloat (slow) for reliable results.
+└ @ Main.SpiderBench.UpgradeSpider ~/.julia/dev/Mandelbrot/spiderlab/UpgradeSpider.jl:682
+┌ Warning: orbit angles of 140737488355327//281474976710655 are only 3.5527136788005136e-15 apart; legs in Float64 cannot separate their shoulders. Use legs=BigFloat (slow) for reliable results.
+└ @ Mandelbrot ~/.julia/dev/Mandelbrot/src/spidermap.jl:726
+┌ Warning: orbit angles of 140737488355327//281474976710655 are only 3.5527136788005136e-15 apart; legs in Float64 cannot separate their shoulders. Use legs=BigFloat (slow) for reliable results.
+└ @ Mandelbrot ~/.julia/dev/Mandelbrot/src/spidermap.jl:726
+┌ Warning: orbit angles of 9223372036854775807//18446744073709551615 are only 5.421010862427522e-20 apart; legs in Float64 cannot separate their shoulders. Use legs=BigFloat (slow) for reliable results.
+└ @ Main.SpiderBench.UpgradeSpider ~/.julia/dev/Mandelbrot/spiderlab/UpgradeSpider.jl:682
+┌ Warning: orbit angles of 9223372036854775807//18446744073709551615 are only 5.421010862427522e-20 apart; legs in Float64 cannot separate their shoulders. Use legs=BigFloat (slow) for reliable results.
+└ @ Main.SpiderBench.UpgradeSpider ~/.julia/dev/Mandelbrot/spiderlab/UpgradeSpider.jl:682
+┌ Warning: orbit angles of 9223372036854775807//18446744073709551615 are only 5.421010862427522e-20 apart; legs in Float64 cannot separate their shoulders. Use legs=BigFloat (slow) for reliable results.
+└ @ Mandelbrot ~/.julia/dev/Mandelbrot/src/spidermap.jl:726
+┌ Warning: orbit angles of 9223372036854775807//18446744073709551615 are only 5.421010862427522e-20 apart; legs in Float64 cannot separate their shoulders. Use legs=BigFloat (slow) for reliable results.
+└ @ Mandelbrot ~/.julia/dev/Mandelbrot/src/spidermap.jl:726
+┌ Warning: orbit angles of 46912496118443//281474976710655 are only 1.065814103640154e-14 apart; legs in Float64 cannot separate their shoulders. Use legs=BigFloat (slow) for reliable results.
+└ @ Main.SpiderBench.UpgradeSpider ~/.julia/dev/Mandelbrot/spiderlab/UpgradeSpider.jl:682
+┌ Warning: orbit angles of 46912496118443//281474976710655 are only 1.065814103640154e-14 apart; legs in Float64 cannot separate their shoulders. Use legs=BigFloat (slow) for reliable results.
+└ @ Main.SpiderBench.UpgradeSpider ~/.julia/dev/Mandelbrot/spiderlab/UpgradeSpider.jl:682
+┌ Warning: orbit angles of 46912496118443//281474976710655 are only 1.065814103640154e-14 apart; legs in Float64 cannot separate their shoulders. Use legs=BigFloat (slow) for reliable results.
+└ @ Mandelbrot ~/.julia/dev/Mandelbrot/src/spidermap.jl:726
+┌ Warning: orbit angles of 46912496118443//281474976710655 are only 1.065814103640154e-14 apart; legs in Float64 cannot separate their shoulders. Use legs=BigFloat (slow) for reliable results.
+└ @ Mandelbrot ~/.julia/dev/Mandelbrot/src/spidermap.jl:726
+┌ Warning: orbit angles of 1024819115206086201//6148914691236517205 are only 1.6263032587282567e-19 apart; legs in Float64 cannot separate their shoulders. Use legs=BigFloat (slow) for reliable results.
+└ @ Main.SpiderBench.UpgradeSpider ~/.julia/dev/Mandelbrot/spiderlab/UpgradeSpider.jl:682
+┌ Warning: orbit angles of 1024819115206086201//6148914691236517205 are only 1.6263032587282567e-19 apart; legs in Float64 cannot separate their shoulders. Use legs=BigFloat (slow) for reliable results.
+└ @ Main.SpiderBench.UpgradeSpider ~/.julia/dev/Mandelbrot/spiderlab/UpgradeSpider.jl:682
+┌ Warning: orbit angles of 1024819115206086201//6148914691236517205 are only 1.6263032587282567e-19 apart; legs in Float64 cannot separate their shoulders. Use legs=BigFloat (slow) for reliable results.
+└ @ Mandelbrot ~/.julia/dev/Mandelbrot/src/spidermap.jl:726
+┌ Warning: orbit angles of 1024819115206086201//6148914691236517205 are only 1.6263032587282567e-19 apart; legs in Float64 cannot separate their shoulders. Use legs=BigFloat (slow) for reliable results.
+└ @ Mandelbrot ~/.julia/dev/Mandelbrot/src/spidermap.jl:726
+┌ Warning: orbit angles of 70368744177664//281474976710655 are only 3.5527136788005136e-15 apart; legs in Float64 cannot separate their shoulders. Use legs=BigFloat (slow) for reliable results.
+└ @ Main.SpiderBench.UpgradeSpider ~/.julia/dev/Mandelbrot/spiderlab/UpgradeSpider.jl:682
+┌ Warning: orbit angles of 70368744177664//281474976710655 are only 3.5527136788005136e-15 apart; legs in Float64 cannot separate their shoulders. Use legs=BigFloat (slow) for reliable results.
+└ @ Main.SpiderBench.UpgradeSpider ~/.julia/dev/Mandelbrot/spiderlab/UpgradeSpider.jl:682
+┌ Warning: orbit angles of 70368744177664//281474976710655 are only 3.5527136788005136e-15 apart; legs in Float64 cannot separate their shoulders. Use legs=BigFloat (slow) for reliable results.
+└ @ Mandelbrot ~/.julia/dev/Mandelbrot/src/spidermap.jl:726
+┌ Warning: orbit angles of 70368744177664//281474976710655 are only 3.5527136788005136e-15 apart; legs in Float64 cannot separate their shoulders. Use legs=BigFloat (slow) for reliable results.
+└ @ Mandelbrot ~/.julia/dev/Mandelbrot/src/spidermap.jl:726
+┌ Warning: orbit angles of 4611686018427387904//18446744073709551615 are only 5.421010862427522e-20 apart; legs in Float64 cannot separate their shoulders. Use legs=BigFloat (slow) for reliable results.
+└ @ Main.SpiderBench.UpgradeSpider ~/.julia/dev/Mandelbrot/spiderlab/UpgradeSpider.jl:682
+┌ Warning: orbit angles of 4611686018427387904//18446744073709551615 are only 5.421010862427522e-20 apart; legs in Float64 cannot separate their shoulders. Use legs=BigFloat (slow) for reliable results.
+└ @ Main.SpiderBench.UpgradeSpider ~/.julia/dev/Mandelbrot/spiderlab/UpgradeSpider.jl:682
+┌ Warning: orbit angles of 4611686018427387904//18446744073709551615 are only 5.421010862427522e-20 apart; legs in Float64 cannot separate their shoulders. Use legs=BigFloat (slow) for reliable results.
+└ @ Mandelbrot ~/.julia/dev/Mandelbrot/src/spidermap.jl:726
+┌ Warning: orbit angles of 4611686018427387904//18446744073709551615 are only 5.421010862427522e-20 apart; legs in Float64 cannot separate their shoulders. Use legs=BigFloat (slow) for reliable results.
+└ @ Mandelbrot ~/.julia/dev/Mandelbrot/src/spidermap.jl:726
+exit 0

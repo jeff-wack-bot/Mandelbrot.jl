@@ -42,6 +42,51 @@ for _ in 1:50
 end
 @test sum(length, S.legs) < 100
 
+# The lift of the segment ``[1+i, 1-i]`` under ``\sqrt{\cdot}`` is an arc of the hyperbola
+# ``x^2 - y^2 = 1`` through ``u = 1``, and its chord lies at ``x = \mathrm{Re}\sqrt{1+i}
+# \approx 1.099``. A foot between the two is enclosed, one on either side is not:
+
+va, vb = 1.0 + 1.0im, 1.0 - 1.0im
+ua, ub = sqrt(va), sqrt(vb)
+@test Mandelbrot.inlens(1.05 + 0.0im, ua, ub, va, vb)
+@test !Mandelbrot.inlens(1.2 + 0.0im, ua, ub, va, vb)
+@test !Mandelbrot.inlens(0.95 + 0.0im, ua, ub, va, vb)
+
+# Each step lifts the legs into the right homotopy class: it agrees with the lift of the
+# same spider whose legs have been subdivided into short pieces, so that every chord is
+# homotopic to its arc.
+
+function densify!(out, a, b)    # pieces shorter than 1e-3 of their distance to 0
+    if abs(b - a) > 1e-3 * min(abs(a), abs(b)) + 1e-9
+        m = (a + b) / 2
+        densify!(out, a, m)
+        densify!(out, m, b)
+    else
+        push!(out, b)
+    end
+    return out
+end
+densify(P) = foldl((out, k) -> densify!(out, P[k], P[k+1]), 1:length(P)-1; init=[P[1]])
+S = Mandelbrot.standardspider(1//1023)
+for _ in 1:12
+    D = Mandelbrot.Spider{Float64,Float64}(S.angle, S.orbit, S.kneading_sequence,
+                                           densify.(S.legs), copy(S.feet))
+    R = Mandelbrot.spider_map(D; refine=false, prune=false)
+    global S = Mandelbrot.spider_map(S)
+    @test S.feet ≈ R.feet
+    for i in eachindex(S.feet)
+        w = Mandelbrot.leg_windings(S.legs[i], R.legs[i], S.feet, i)
+        @test allequal(w[j] for j in eachindex(w) if j != i)
+    end
+end
+
+# A real parameter with extended-precision feet: the Newton candidate lies within 1e-170 of
+# the real axis, and the certificate must still go through.
+
+r = Mandelbrot.spider_solve(3//5; feet=BigFloat)
+@test r.finish === :newton_certified
+@test isapprox(r.c, -1.3107026413368328; atol=1e-14)
+
 # A slowly converging angle (near the cusp) is finished by a certified Newton step:
 
 r = Mandelbrot.spider_solve(1//(2^20 - 1))

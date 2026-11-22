@@ -12,10 +12,11 @@ using Random
 
 const M = Mandelbrot
 include(joinpath(@__DIR__, "LegacySpider.jl"))
+include(joinpath(@__DIR__, "UpgradeSpider.jl"))
 include(joinpath(@__DIR__, "GroundTruth.jl"))
 using .GroundTruth
 
-export LegacySpider, GroundTruth, run_legacy, run_new, classify, reference,
+export LegacySpider, UpgradeSpider, GroundTruth, run_legacy, run_new, classify, reference,
        periodic_angles, preperiodic_angles, family, Row, write_csv, read_csv
 
 #---------------------------------------------------------------------------
@@ -228,15 +229,16 @@ function run_legacy(θ::Rational; maxiter::Int=250, fixindex::Bool=false, tol_ok
 end
 
 """
-Upgraded implementation (`Mandelbrot.spider_solve`). Keyword arguments are passed on.
+Current implementation (`Mandelbrot.spider_solve`), or with `mod=UpgradeSpider` the
+shoulder-first version of 38caca9. Keyword arguments are passed on.
 """
-function run_new(θ::Rational; impl::String="new", tol_ok=1e-10, kwargs...)
+function run_new(θ::Rational; impl::String="new", mod::Module=M, tol_ok=1e-10, kwargs...)
     ref = reference(θ)
     row = Row(impl=impl, angle=string(θ), preperiod=ref.preperiod, period=ref.period)
     local r
     GC.gc()
     stats = @timed try
-        r = M.spider_solve(θ; kwargs...)
+        r = mod.spider_solve(θ; kwargs...)
         true
     catch e
         row.note = sprint(showerror, e)[1:min(end, 80)]

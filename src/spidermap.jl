@@ -14,24 +14,28 @@ radius `SPIDER_RADIUS` at angle ≈ θ_i, continued radially to infinity) to its
 One step of the spider map replaces leg i by the lift under p_λ of leg σ(i), where
 σ(i) is the index of 2θ_i in the orbit (`goestoidx`).
 
-Implementation notes (see spiderlab/REPORT.md for the measurements behind them):
+One step follows §9 ("A Comment on Implementation") of the paper: first the new feet,
+then the new legs.
 
-* Lifting a polyline by continuation is exact: a straight segment [a,b] that misses
-  the origin subtends an angle < π at 0, so its continuous square root subtends an
-  angle < π/2 and the correct branch at b is the one with Re(conj(√a)·√b) > 0. No
-  branch cut is involved.
-* Which of the two lifts becomes leg i is decided at infinity. Leg 1 is the lift of
-  leg 2 whose foot is u = +1 (i.e. z = 0); every other leg is the lift whose
-  shoulder direction differs from that of leg 1 by θ_i - θ_1. This is equivalent to
-  the kneading-sequence rule but needs no sector bookkeeping.
-* The chord between two lifted vertices need not be homotopic to the true lift of the
-  segment. Segments are subdivided (before lifting) until no possible marked point
-  lies between chord and arc.
+* New feet. Let w̃ be the preimage of z_{σ(i)} closest to 0, i.e. the end of the lift of
+  the segment [z_2, z_{σ(i)}] that starts at 0. It lies in sector A (the one containing 0)
+  iff that segment crosses leg 1 an even number of times. The new foot z̃_i is w̃ if its
+  sector agrees with the kneading sequence, and the other preimage otherwise. This only
+  needs leg 1 and the old feet.
+* New legs. Leg i is the lift of leg σ(i) that ends at z̃_i, computed by continuation of
+  u = √(z/λ) from the foot to the shoulder. Continuation is exact: a segment that misses
+  0 subtends an angle < π at 0, so the root at the next vertex is the one with
+  Re(conj(√a)·√b) > 0. For the leg of the critical point (z̃ = -2, periodic angles) both
+  lifts of leg 1 end at -2; the one whose shoulder makes the angle θ_i - θ_1 with
+  leg 1 at infinity is chosen.
+* The lift of a segment is an arc of a hyperbola, and its chord is homotopic to it unless
+  a new foot lies between them. This is tested exactly by three sign tests (the foot lies
+  in the triangle spanned by the chord and the critical point, and its image lies beyond
+  the line of the source segment), and the segment is bisected until no foot is enclosed.
 * Vertices are removed when the triangle they span with their neighbours contains no
-  marked point (this does not change the homotopy class of the leg), which keeps the
-  number of points bounded.
-* The feet can be carried in a different (higher) precision than the legs: the legs
-  are only used to decide branches, the feet are lifted exactly.
+  foot (this does not change the homotopy class of the leg), repeated until no vertex can
+  be removed.
+* The feet can be carried in a different (higher) precision than the legs.
 =#
 
 const SPIDER_RADIUS = 1.0e6
@@ -85,28 +89,6 @@ function PointSet(pts::AbstractVector{Complex{L}}) where L
     return PointSet{L}(real.(p), imag.(p))
 end
 
-# smallest distance from any point of P to the segment [a,b], only looking at
-# points within distance r of the segment's bounding box; returns Inf if none.
-function mindist(P::PointSet{L}, a::Complex{L}, b::Complex{L}, r::L) where L
-    xlo = min(real(a), real(b)) - r
-    xhi = max(real(a), real(b)) + r
-    ylo = min(imag(a), imag(b)) - r
-    yhi = max(imag(a), imag(b)) + r
-    best = L(Inf)
-    i = searchsortedfirst(P.x, xlo)
-    @inbounds while i <= length(P.x) && P.x[i] <= xhi
-        y = P.y[i]
-        if ylo <= y <= yhi
-            q = complex(P.x[i], y)
-            if q != a && q != b    # the segment's own end points are not obstacles
-                best = min(best, segdist(q, a, b))
-            end
-        end
-        i += 1
-    end
-    return best
-end
-
 function segdist(p::Complex, a::Complex, b::Complex)
     d = b - a
     l2 = abs2(d)
@@ -148,13 +130,19 @@ end
 # Lifting
 
 Base.@kwdef struct SpiderOptions
-    refine::Bool = true        # subdivide segments whose lifted chord is not homotopic to the arc
+    refine::Bool = true        # bisect segments whose lifted chord would pass over a foot
     prune::Bool = true         # drop vertices whose removal does not change the homotopy class
-    maxsweep::Float64 = 0.5    # max angle (rad) a segment may subtend at the critical value
-    safety::Float64 = 2.0      # chord–arc deviation must be < dist(obstacle)/safety
+    maxsweep::Float64 = 2.5    # max angle (rad) a segment may subtend at the critical value, so
+                               # that continuation of the square root stays well conditioned
+                               # (the branch decision has a margin of cos(maxsweep/2))
     maxdepth::Int = 40         # recursion limit for subdivision of one segment
     maxpoints::Int = 10_000_000
 end
+
+struct SpiderTooLarge <: Exception
+    npoints::Int
+end
+Base.showerror(io::IO, e::SpiderTooLarge) = print(io, "spider has $(e.npoints) points (see maxpoints)")
 
 mutable struct SpiderStats
     refinements::Int
@@ -175,48 +163,87 @@ end
     return abs(angle(vb / va))
 end
 
-# Push the lift of the segment [va, vb] (u = √v, branch continuing from ua) onto Q.
-function lift_segment!(Q, va, ua, vb, obst, opts::SpiderOptions, stats::SpiderStats, depth::Int)
+# Is u between the chord [ua, ub] and the lift of the segment [va, vb] (u² = v)? This is
+# the test of §9: u lies in the triangle (0, ua, ub), i.e. on the same side of the chord as
+# the critical point and within the angle the arc subtends there, and u² lies beyond the
+# line through va and vb, i.e. u is inside the hyperbola. The tests are closed, so a foot
+# on the boundary counts as enclosed. Signs are compared rather than multiplied: the
+# products of two tiny cross products would underflow to 0 (e.g. for feet within 1e-170 of
+# the real axis) and then every foot would count as enclosed.
+@inline function inlens(u::Complex, ua::Complex, ub::Complex, va::Complex, vb::Complex)
+    o = sign(cross2(ua, ub))
+    iszero(o) && return false      # radial segment: its lift is straight
+    (sign(cross2(ua, u)) * o >= 0 && sign(cross2(u, ub)) * o >= 0 &&
+     sign(cross2(ub - ua, u - ua)) * o >= 0) || return false
+    d = vb - va
+    return sign(cross2(d, u^2 - va)) * sign(cross2(d, -va)) <= 0
+end
+
+# Does the lift of [va, vb] enclose one of the new feet (given by their roots), other than
+# the foot of the leg being lifted? The critical point u = 0 is never inside a hyperbola.
+function encloses(feet::Vector{<:Complex}, own::Int, ua, ub, va, vb)
+    for (k, u) in enumerate(feet)
+        (k == own || iszero(u) || u == ua || u == ub) && continue
+        inlens(u, ua, ub, va, vb) && return true
+    end
+    return false
+end
+
+# Push the lift of the segment [va, vb] onto Q, continuing from the root ua at va.
+function lift_segment!(Q, va, ua, vb, feet, own::Int, opts::SpiderOptions, stats::SpiderStats, depth::Int)
     ub = nextroot(ua, vb)
-    if opts.refine && depth < opts.maxdepth
-        split = sweep(va, vb) > opts.maxsweep
-        if !split
-            um = nextroot(ua, (va + vb) / 2)
-            dev = abs(um - (ua + ub) / 2)
-            # a deviation below rounding cannot be resolved by splitting (this happens
-            # when marked points merge, e.g. for Misiurewicz angles whose orbit angles
-            # share a landing point)
-            if dev > 4 * eps(real(typeof(ua))) * max(abs(ua), abs(ub))
-                split = mindist(obst, ua, ub, opts.safety * dev) <= opts.safety * dev
-            end
-        end
-        if split
+    if sweep(va, vb) > opts.maxsweep || (opts.refine && encloses(feet, own, ua, ub, va, vb))
+        if depth < opts.maxdepth
+            length(Q) > opts.maxpoints && throw(SpiderTooLarge(length(Q)))
             stats.refinements += 1
             vm = (va + vb) / 2
-            lift_segment!(Q, va, ua, vm, obst, opts, stats, depth + 1)
-            lift_segment!(Q, vm, Q[end], vb, obst, opts, stats, depth + 1)
+            lift_segment!(Q, va, ua, vm, feet, own, opts, stats, depth + 1)
+            lift_segment!(Q, vm, Q[end], vb, feet, own, opts, stats, depth + 1)
             return Q
         end
-    elseif opts.refine
         stats.saturated += 1
     end
     push!(Q, ub)
     return Q
 end
 
-# Lift the polyline P/λ under √, starting with the principal root at P[1].
-function lift_path(P::Vector{Complex{L}}, λ::Complex{L}, obst, opts, stats) where L
-    va = P[1] / λ
-    ua = sqrt(va)
-    Q = Complex{L}[ua]
+# Lift the leg P (shoulder P[1], …, foot P[end]) under u = √(z/λ) by continuation from the
+# root u0 at the foot; `own` is the index of the new foot u0 among `feet`. If the foot is the
+# critical value (u0 = 0) the root at the next vertex is the one closest to `dir`.
+# Returns the roots in shoulder-to-foot order.
+function lift_leg(P::Vector{Complex{L}}, λ::Complex{L}, u0::Complex{L}, dir::Complex{L},
+                  feet, own::Int, opts, stats) where L
+    Q = Complex{L}[u0]
     sizehint!(Q, length(P))
-    for k in 2:length(P)
+    va = P[end] / λ
+    for k in (length(P)-1):-1:1
         vb = P[k] / λ
-        lift_segment!(Q, va, ua, vb, obst, opts, stats, 0)
+        if iszero(Q[end])
+            push!(Q, nextroot(dir, vb))    # a segment ending at 0 is radial, so is its lift
+        else
+            lift_segment!(Q, va, Q[end], vb, feet, own, opts, stats, 0)
+        end
         va = vb
-        ua = Q[end]
     end
-    return Q
+    return reverse!(Q)
+end
+
+# Does the polyline γ cross the segment [a, b] an odd number of times? Points on the line
+# through a and b count as lying on its right, so a crossing through a vertex of γ is
+# counted once.
+function crosses_odd(γ::Vector{<:Complex}, a::Complex, b::Complex)
+    d = b - a
+    odd = false
+    @inbounds for k in 1:(length(γ)-1)
+        p = γ[k]; q = γ[k+1]
+        if (cross2(d, p - a) > 0) != (cross2(d, q - a) > 0)
+            e = q - p
+            if (cross2(e, a - p) > 0) != (cross2(e, b - p) > 0)
+                odd = !odd
+            end
+        end
+    end
+    return odd
 end
 
 # Remove vertices whose triangle with the neighbours is free of marked points.
@@ -250,56 +277,71 @@ function spider_map(S::Spider{T,L}; stats::SpiderStats=SpiderStats(), kwargs...)
     opts = SpiderOptions(; kwargs...)
     n = length(S.legs)
     θs = S.orbit.items
+    K = S.kneading_sequence
     src = goestoidx(S.orbit)          # new leg i is a lift of old leg src[i]
     λ = S.feet[2]
     λL = Complex{L}(λ)
 
-    # roots of z_k/λ in the u-plane: both preimages of every marked point.
-    roots = [sqrt(Complex{L}(z) / λL) for z in S.feet]
-    obst = PointSet(vcat(roots, -roots))
-
-    # lift each needed source leg once (principal branch at the shoulder)
-    lifts = Dict{Int,Vector{Complex{L}}}()
-    for j in unique(src)
-        lifts[j] = lift_path(S.legs[j], λL, obst, opts, stats)
-    end
-
-    # decide the branches
-    signs = Vector{Int}(undef, n)
-    U1 = lifts[src[1]]
-    signs[1] = real(U1[end]) > 0 ? 1 : -1        # foot of leg 1 must be u = +1
-    ψ1 = angle(signs[1] * U1[1]) / (2π)
-    for i in 2:n
-        U = lifts[src[i]]
-        target = ψ1 + Float64(θs[i] - θs[1])
-        ψ = angle(U[1]) / (2π)
-        signs[i] = angdiff(ψ, target) < angdiff(ψ + 0.5, target) ? 1 : -1
-    end
-
-    # new feet, in the feet precision; branch from the leg's foot
-    newfeet = Vector{Complex{T}}(undef, n)
+    # New feet, as roots u = √(z/λ); the foot is z̃ = 2(u - 1). The preimage of z closest
+    # to 0 has the principal root; it is in sector A iff [z_2, z] crosses leg 1 an even
+    # number of times. The crossing test runs in the higher of the two precisions.
+    P = promote_type(T, L)
+    γ1 = Complex{P}.(S.legs[1])
+    a = Complex{P}(λ)
+    roots = Vector{Complex{T}}(undef, n)
     for i in 1:n
         z = S.feet[src[i]]
-        if iszero(z)
-            newfeet[i] = Complex{T}(-2)
-        else
-            r = sqrt(z / λ)
-            ufoot = signs[i] * lifts[src[i]][end]
-            if real(conj(Complex{L}(r)) * ufoot) < 0
-                r = -r
-            end
-            newfeet[i] = 2 * (r - 1)
+        if iszero(z)                  # the critical point, z̃ = -2
+            roots[i] = zero(Complex{T})
+            continue
         end
+        v = z / λ
+        r = sqrt(v)
+        b = Complex{P}(z)
+        # when [z_2, z] passes close to 0 the principal branch must agree with the side of 0
+        # that the crossing test sees
+        if real(v) < 0 && (imag(r) > 0) != (cross2(b - a, -a) > 0)
+            r = -r
+        end
+        inA = !crosses_odd(γ1, a, b)
+        (K[i] == KneadingSymbol{4}("A")) == inA || (r = -r)
+        roots[i] = r
     end
+    newfeet = [2 * (r - 1) for r in roots]
     newfeet[1] = zero(Complex{T})
+    feetL = Complex{L}.(roots)
+
+    # New legs, lifted from their feet. Leg 1 goes first: its shoulder fixes the direction
+    # at infinity against which the lift of leg 1 ending at the critical point is chosen.
+    lifts = Vector{Vector{Complex{L}}}(undef, n)
+    star = 0
+    for i in 1:n
+        if iszero(roots[i])
+            star = i
+            continue
+        end
+        Pl = S.legs[src[i]]
+        u0 = nextroot(feetL[i], Pl[end] / λL)
+        lifts[i] = lift_leg(Pl, λL, u0, u0, feetL, i, opts, stats)
+    end
+    if star != 0
+        Pl = S.legs[src[star]]
+        dir = sqrt(Pl[findlast(!iszero, Pl)] / λL)   # the leg may repeat its foot 0
+        probe = lift_leg(Pl, λL, zero(dir), dir, feetL, star,
+                         SpiderOptions(; refine=false, maxsweep=opts.maxsweep, maxdepth=opts.maxdepth),
+                         SpiderStats())
+        target = angle(lifts[1][1]) / (2π) + Float64(θs[star] - θs[1])
+        ψ = angle(probe[1]) / (2π)
+        angdiff(ψ, target) < angdiff(ψ + 0.5, target) || (dir = -dir)
+        lifts[star] = lift_leg(Pl, λL, zero(dir), dir, feetL, star, opts, stats)
+    end
 
     newlegs = Vector{Vector{Complex{L}}}(undef, n)
     for i in 1:n
-        U = lifts[src[i]]
-        s = signs[i]
+        U = lifts[i]
         leg = Vector{Complex{L}}(undef, length(U) + 1)
         @inbounds for k in eachindex(U)
-            leg[k+1] = 2 * (s * U[k] - 1)
+            leg[k+1] = 2 * (U[k] - 1)
         end
         leg[end] = Complex{L}(newfeet[i])
         # radial extension back out to the circle of radius SPIDER_RADIUS
@@ -310,12 +352,16 @@ function spider_map(S::Spider{T,L}; stats::SpiderStats=SpiderStats(), kwargs...)
     if opts.prune
         marks = PointSet(Complex{L}.(newfeet))
         for leg in newlegs
-            prune_leg!(leg, marks, stats)
+            m = 0
+            while m != length(leg)
+                m = length(leg)
+                prune_leg!(leg, marks, stats)
+            end
         end
     end
 
     total = sum(length, newlegs)
-    total > opts.maxpoints && error("spider has $total points (maxpoints = $(opts.maxpoints))")
+    total > opts.maxpoints && throw(SpiderTooLarge(total))
 
     return Spider{T,L}(S.angle, S.orbit, S.kneading_sequence, newlegs, newfeet)
 end
@@ -597,7 +643,13 @@ function certify(S::Spider{T,L}, c; drag::Symbol=:isotopy, legs::Bool=true, step
     S2 = Spider{T,L}(S.angle, S.orbit, S.kneading_sequence,
                      [push!(copy(leg), ZL[i]) for (i, leg) in enumerate(S.legs)], Z)
     for _ in 1:steps
-        S3 = spider_map(S2; kwargs...)
+        # a candidate far from the fixed point can force unbounded subdivision
+        S3 = try
+            spider_map(S2; maxpoints=100 * sum(length, S2.legs) + 10_000, kwargs...)
+        catch e
+            e isa SpiderTooLarge || rethrow()
+            return :inconclusive
+        end
         # Z[σ(i)] has the preimages Z[i] and -Z[i]-4; the legs must select Z[i]
         # (for the critical point -2 both preimages coincide, so the choice is immaterial)
         ok = all(abs(S3.feet[i] - Z[i]) <= abs(-S3.feet[i] - 4 - Z[i]) ||

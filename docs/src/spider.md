@@ -63,11 +63,15 @@ r = Mandelbrot.spider_solve(1//1023)
 (r.c, r.iterations, r.finish, r.size)
 ```
 
+* Each step follows §9 of [Hubbard_Schleicher_1995](@cite). The new feet are found first:
+  the preimage of ``z_{j+1}`` closest to 0 lies in sector A exactly when the segment
+  ``[z_2, z_{j+1}]`` crosses the leg of ``z_1 = 0`` an even number of times. Each leg is
+  then lifted from its new foot. The lift of a straight segment is an arc of a
+  hyperbola, and it is replaced by its chord unless a new foot lies between the two (three
+  sign tests); otherwise the segment is bisected.
 * The legs are kept minimal: every vertex whose removal does not change the homotopy
-  class of the leg (relative to the marked points) is pruned, and segments are
-  subdivided before lifting whenever the lifted chord could pass on the wrong side of a
-  marked point. A spider therefore has a few points per leg instead of growing every
-  iteration.
+  class of the leg (relative to the marked points) is pruned. A spider therefore has a
+  few points per leg instead of growing every iteration.
 * Once the spider is roughly in place, Newton's method on the whole critical orbit
   (multiple shooting) proposes the answer, and [`Mandelbrot.certify`](@ref) checks it
   against the spider. Slowly converging angles (near the cusp, `1//(2^p-1)`) finish in a
